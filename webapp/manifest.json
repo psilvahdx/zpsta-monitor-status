@@ -1,0 +1,257 @@
+{
+    "_version": "1.37.0",
+    "sap.app": {
+        "id": "portoseguro.zpstastatusmon",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.7.6",
+            "toolsId": "65a2b61a-7190-4602-93ac-63a899e1321a"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZPSGW_STATUS_MON_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "InboundService": {
+				"uri": "/sap/opu/odata/sap/ZPSGW_INBOUND_SRV/",
+				"type": "OData",
+				"settings": {
+                    "type": "ODataAnnotation",
+					"localUri": "/webapp/localService/metadata_Inbound.xml",
+					"annotations": ["annotationInb"]
+				}
+			},
+            "StageService": {
+				"uri": "/sap/opu/odata/sap/ZPSGW_STAGE_SRV/",
+				"type": "OData",
+				"settings": {
+                    "type": "ODataAnnotation",
+					"localUri": "/webapp/localService/metadata_Stage.xml",
+					"annotations": ["annotationStg"]
+				}
+			},
+			"HistService": {
+				"uri": "/sap/opu/odata/sap/ZPSGW_HISTORICO_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "/webapp/localService/metadata_Historico.xml",
+					"annotations": ["annotationHist"]
+				}
+            },
+            "annotationInb": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotationStg.xml",
+                "settings": {
+                    "localUri": "annotations/annotationInb.xml"
+                }
+            },
+            "annotationStg": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotationStg.xml",
+                "settings": {
+                    "localUri": "annotations/annotationStg.xml"
+                }
+            },
+            "annotation2": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotationHist.xml",
+                "settings": {
+                    "localUri": "annotations/annotationHist.xml"
+                }
+            }
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "portoseguro-zpstastatusmon-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "OZFPSL",
+                    "action": "zpsta_statusmon",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.96.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "portoseguro.zpstastatusmon.i18n.i18n"
+                }
+            },
+            "@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {}
+            },
+			"InboundServ": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "InboundService",
+				"preload": true
+			},
+			"StageServ": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "StageService",
+				"preload": true
+			},
+            "HistServ": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "HistService",
+				"preload": true
+			}
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "portoseguro.zpstastatusmon.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "RouteMain",
+                    "pattern": ":?query:",
+                    "target": [
+                        "TargetMain"
+                    ]
+                },
+                {
+					"name": "TargetDetailPageInb",
+					"pattern": "detailinb/{status}",
+					"target": [
+						"TargetDetailPageInb"
+					]
+				},
+				{
+					"name": "TargetDetailPageStg",
+					"pattern": "detailstg/{status}",
+					"target": [
+						"TargetDetailPageStg"
+					]
+				},
+				{
+					"name": "TargetDetailPageHist",
+					"pattern": "detailhist/",
+					"target": [
+						"TargetDetailPageHist"
+					]
+				}
+            ],
+            "targets": {
+                "TargetMain": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Main",
+                    "viewName": "Main"
+                },
+				"TargetDetailPageInb": {
+					"viewId": "DetailPageInb",
+					"viewName": "DetailPageInb",
+					"transition": "slide"
+				},
+				"TargetDetailPageStg": {
+					"viewId": "DetailPageStg",
+					"viewName": "DetailPageStg",
+					"transition": "slide"
+				},
+				"TargetDetailPageHist": {
+					"viewId": "DetailPageHist",
+					"viewName": "DetailPageHist",
+					"transition": "slide"
+				}
+                
+            }
+        },
+        "rootView": {
+            "viewName": "portoseguro.zpstastatusmon.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "App"
+        }
+    }
+}

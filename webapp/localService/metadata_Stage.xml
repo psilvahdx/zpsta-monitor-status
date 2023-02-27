@@ -1,0 +1,1025 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+<edmx:DataServices m:DataServiceVersion="2.0">
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZPSGW_STAGE_SRV" xml:lang="pt" sap:schema-version="1">
+    <Annotation xmlns="http://docs.oasis-open.org/odata/ns/edm" Term="Core.SchemaVersion" String="1.0.0"/>
+        <EntityType Name="ZPSTA_STG_BT_PRV" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="CodigoOperacao"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="CodigoIdDocEventoPrevExt"/>
+                <PropertyRef Name="NumeroMovimentoPrevExt"/>
+                <PropertyRef Name="NumeroDetalheMovPrevExt"/>
+                <PropertyRef Name="CodigoReservaPrevidenciaExt"/>
+                <PropertyRef Name="CodigoFundoReservaPrevExt"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumVersaoLancamentoPrevExt"/>
+                <PropertyRef Name="CodRotContEvNegParam"/>
+                <PropertyRef Name="CodigoConector"/>
+                <PropertyRef Name="SubItem"/>
+            </Key>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoOperacao" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="CODIGO_OPERACAO"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="CodigoIdDocEventoPrevExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="CODIGO_ID_DOC_EVENTO_PREV_EXT"/>
+            <Property Name="NumeroMovimentoPrevExt" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="NUMERO_MOVIMENTO_PREV_EXT"/>
+            <Property Name="NumeroDetalheMovPrevExt" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="NUMERO_DETALHE_MOV_PREV_EXT"/>
+            <Property Name="CodigoReservaPrevidenciaExt" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="CODIGO_RESERVA_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoFundoReservaPrevExt" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="CODIGO_FUNDO_RESERVA_PREV_EXT"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumVersaoLancamentoPrevExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_VERSAO_LANCAMENTO_PREV_EXT"/>
+            <Property Name="CodRotContEvNegParam" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="COD_ROT_CONT_EV_NEG_PARAM"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoParticipantePrevExt" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="CODIGO_PARTICIPANTE_PREV_EXT"/>
+            <Property Name="CodigoCertificadoPrevExt" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="CODIGO_CERTIFICADO_PREV_EXT"/>
+            <Property Name="CodigoPlanoPrevidenciaExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_PLANO_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoBeneficioPrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_BENEFICIO_PREV_EXT"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="SourceSystem" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="SOURCE_SYSTEM"/>
+            <Property Name="DataMovimentoPrevidenciaExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MOVIMENTO_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoSucursalPrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_SUCURSAL_PREV_EXT"/>
+            <Property Name="NumeroApolicePrevidenciaExt" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoEndossoPrevidenciaExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_ENDOSSO_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoEndossoRefPrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_ENDOSSO_REF_PREV_EXT"/>
+            <Property Name="CodigoRamoPrevidenciaExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_RAMO_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoModalidadePrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_MODALIDADE_PREV_EXT"/>
+            <Property Name="AnoMesMovimentoPrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="ANO_MES_MOVIMENTO_PREV_EXT"/>
+            <Property Name="CodigoPlanoSusepPlncodigo" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_PLANO_SUSEP_PLNCODIGO"/>
+            <Property Name="CodCertSistemaEsegPrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="COD_CERT_SISTEMA_ESEG_PREV_EXT"/>
+            <Property Name="CodEmpresaCadSusepPrevExt" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="COD_EMPRESA_CAD_SUSEP_PREV_EXT"/>
+            <Property Name="ProcessoSusepPrevidenciaExt" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="PROCESSO_SUSEP_PREVIDENCIA_EXT"/>
+            <Property Name="FlagEstornoPrevidenciaExt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_ESTORNO_PREVIDENCIA_EXT"/>
+            <Property Name="CodTpProporcaoMovPrevExt" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="COD_TP_PROPORCAO_MOV_PREV_EXT"/>
+            <Property Name="CodigoContribuicaoPrevExt" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="CODIGO_CONTRIBUICAO_PREV_EXT"/>
+            <Property Name="NomeContribuicaoPrevExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_CONTRIBUICAO_PREV_EXT"/>
+            <Property Name="DataEmissaoRiscoPrevExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMISSAO_RISCO_PREV_EXT"/>
+            <Property Name="NumTituloContaPagaPrevExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="NUM_TITULO_CONTA_PAGA_PREV_EXT"/>
+            <Property Name="MoedaTransacaoPrevExt" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="MOEDA_TRANSACAO_PREV_EXT"/>
+            <Property Name="NomeReservaPrevidenciaExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_RESERVA_PREVIDENCIA_EXT"/>
+            <Property Name="NomeFundoReservaPrevExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_FUNDO_RESERVA_PREV_EXT"/>
+            <Property Name="QtdDiaFloatFundoPrevExt" Type="Edm.Int32" sap:unicode="false" sap:label="QTD_DIA_FLOAT_FUNDO_PREV_EXT"/>
+            <Property Name="NumeroCnpjFundoResPrevExt" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="NUMERO_CNPJ_FUNDO_RES_PREV_EXT"/>
+            <Property Name="DtSensibilizacaoResPrevExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_SENSIBILIZACAO_RES_PREV_EXT"/>
+            <Property Name="DataCotaReservaPrevExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_COTA_RESERVA_PREV_EXT"/>
+            <Property Name="DataBaixaReservaPrevExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_BAIXA_RESERVA_PREV_EXT"/>
+            <Property Name="QuantidadeCotaResPrevExt" Type="Edm.Decimal" Precision="31" Scale="8" sap:unicode="false" sap:label="QUANTIDADE_COTA_RES_PREV_EXT"/>
+            <Property Name="ValorIndCotaResPrevExt" Type="Edm.Decimal" Precision="31" Scale="8" sap:unicode="false" sap:label="VALOR_IND_COTA_RES_PREV_EXT"/>
+            <Property Name="PercentualExcedDifPrevExt" Type="Edm.Decimal" Precision="5" Scale="2" sap:unicode="false" sap:label="PERCENTUAL_EXCED_DIF_PREV_EXT"/>
+            <Property Name="PercentualExcedConcPrevExt" Type="Edm.Decimal" Precision="5" Scale="2" sap:unicode="false" sap:label="PERCENTUAL_EXCED_CONC_PREV_EXT"/>
+            <Property Name="CodigoIncorpExcedPrevExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_INCORP_EXCED_PREV_EXT"/>
+            <Property Name="NomeIncorpExcedPrevExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_INCORP_EXCED_PREV_EXT"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="CorrelationId" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="CORRELATION_ID"/>
+            <Property Name="CodAtenaReferenciaCorrecao" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="COD_ATENA_REFERENCIA_CORRECAO"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="VlTotalPrevExtrato" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VL_TOTAL_PREV_EXTRATO"/>
+            <Property Name="DtVencPrimParcPrevExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_VENC_PRIM_PARC_PREV_EXTRATO"/>
+            <Property Name="NomePerfilInvestPrevExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_PERFIL_INVEST_PREV_EXT"/>
+            <Property Name="DtContabilPrevExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_CONTABIL_PREV_EXTRATO"/>
+            <Property Name="VlrMovContabilPrev" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VLR_MOV_CONTABIL_PREV"/>
+            <Property Name="NumeroParcelaPrevExtParc" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_PARCELA_PREV_EXT_PARC"/>
+            <Property Name="NumParcelaSapPrevExtParc" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_PARCELA_SAP_PREV_EXT_PARC"/>
+            <Property Name="ValorParcelaPrevExtParc" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_PARCELA_PREV_EXT_PARC"/>
+            <Property Name="DataVencimentoPrevExtParc" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_VENCIMENTO_PREV_EXT_PARC"/>
+            <Property Name="DataInicioVigPrevExtParc" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INICIO_VIG_PREV_EXT_PARC"/>
+            <Property Name="DataFimVigPrevExtParc" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_FIM_VIG_PREV_EXT_PARC"/>
+            <Property Name="DataPagamentoPrevExtParc" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_PAGAMENTO_PREV_EXT_PARC"/>
+            <Property Name="NomePlanoPrevBenef" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_PLANO_PREV_BENEF"/>
+            <Property Name="NomeBenefPrevBenef" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_BENEF_PREV_BENEF"/>
+            <Property Name="CodTpBenefPrevBenef" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_BENEF_PREV_BENEF"/>
+            <Property Name="DescTpBenefPrevBenef" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="DESC_TP_BENEF_PREV_BENEF"/>
+            <Property Name="CodTpPagtoPrevBenef" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_PAGTO_PREV_BENEF"/>
+            <Property Name="NomeTpPagtoPrevBenef" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="NOME_TP_PAGTO_PREV_BENEF"/>
+            <Property Name="CodTpPrazoPagtoPrevBenef" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_PRAZO_PAGTO_PREV_BENEF"/>
+            <Property Name="NomeTpPrazoPagtoPrevBenef" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="NOME_TP_PRAZO_PAGTO_PREV_BENEF"/>
+            <Property Name="QtdeMesPrzoRendaPrevBenef" Type="Edm.Int32" sap:unicode="false" sap:label="QTDE_MES_PRZO_RENDA_PREV_BENEF"/>
+            <Property Name="CodStatusCobPrevBenef" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="COD_STATUS_COB_PREV_BENEF"/>
+            <Property Name="DescStatusCobertPrevBenef" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="DESC_STATUS_COBERT_PREV_BENEF"/>
+            <Property Name="CodSubstatCobertPrevBenef" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="COD_SUBSTAT_COBERT_PREV_BENEF"/>
+            <Property Name="DescSubstatCobertPrevBenef" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="DESC_SUBSTAT_COBERT_PREV_BENEF"/>
+            <Property Name="DtUltimoReajustePrevBenef" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_ULTIMO_REAJUSTE_PREV_BENEF"/>
+            <Property Name="DtProximoReajustePrevBenef" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_PROXIMO_REAJUSTE_PREV_BENEF"/>
+            <Property Name="CodParticipantePrevCertif" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="COD_PARTICIPANTE_PREV_CERTIF"/>
+            <Property Name="CodProdutoPrevCertif" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="COD_PRODUTO_PREV_CERTIF"/>
+            <Property Name="NomeProdutoPrevCertif" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_PRODUTO_PREV_CERTIF"/>
+            <Property Name="TipoProdutoPrevCertif" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="TIPO_PRODUTO_PREV_CERTIF"/>
+            <Property Name="TipoCertifPrevCertif" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="TIPO_CERTIF_PREV_CERTIF"/>
+            <Property Name="CodCertifContaColPrevCert" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="COD_CERTIF_CONTA_COL_PREV_CERT"/>
+            <Property Name="CodRespFinancPrevCertif" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="COD_RESP_FINANC_PREV_CERTIF"/>
+            <Property Name="DtPrvisSaidPlanPrevCertif" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_PRVIS_SAID_PLAN_PREV_CERTIF"/>
+            <Property Name="DtEntrPlanoPrevCertif" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_ENTR_PLANO_PREV_CERTIF"/>
+            <Property Name="CodStatusCertifPrevCertif" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="COD_STATUS_CERTIF_PREV_CERTIF"/>
+            <Property Name="DescStatusCertifPrevCertif" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="DESC_STATUS_CERTIF_PREV_CERTIF"/>
+            <Property Name="CodSubstsCertifPrevCertif" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="COD_SUBSTS_CERTIF_PREV_CERTIF"/>
+            <Property Name="DescSubstsCertifPrevCertif" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="DESC_SUBSTS_CERTIF_PREV_CERTIF"/>
+            <Property Name="FlagMigSistEsegPrevCertif" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_MIG_SIST_ESEG_PREV_CERTIF"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="DtIniVigPlanoBenPrevExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VIG_PLANO_BEN_PREV_EXT"/>
+            <Property Name="DtFimVigPlanoBenPrevExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VIG_PLANO_BEN_PREV_EXT"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="CodigoFormaPagPrevExtParc" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="CODIGO_FORMA_PAG_PREV_EXT_PARC"/>
+            <Property Name="DtInicioVigenciaPrevBenef" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INICIO_VIGENCIA_PREV_BENEF"/>
+            <Property Name="DtFimVigenciaPrevBenef" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VIGENCIA_PREV_BENEF"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+        
+
+        <EntityType Name="ZPSTA_STG_BT_SOC" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodigoSucursal"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="NumeroServico"/>
+                <PropertyRef Name="AnoServico"/>
+                <PropertyRef Name="CodigoRamoContabil"/>
+                <PropertyRef Name="CodigoModalidade"/>
+                <PropertyRef Name="DataCompetencia"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumeroVersaoLancamento"/>
+                <PropertyRef Name="CodigoConector"/>
+                <PropertyRef Name="SubItem"/>
+            </Key>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoSucursal" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="NumeroServico" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="NUMERO_SERVICO"/>
+            <Property Name="AnoServico" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_SERVICO"/>
+            <Property Name="CodigoRamoContabil" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO_CONTABIL"/>
+            <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="DataCompetencia" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_COMPETENCIA"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumeroVersaoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="DtAbertServAtendPtSocExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_ABERT_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="DtExecServAtendPtSocExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_EXEC_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="DataPagServAtendPtSocExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_PAG_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="AnoOrdemPagAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_ORDEM_PAG_ATEND_PT_SOC_EXT"/>
+            <Property Name="NumOrdemPagAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_ORDEM_PAG_ATEND_PT_SOC_EXT"/>
+            <Property Name="NumApoAtendPortoSocExt" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUM_APO_ATEND_PORTO_SOC_EXT"/>
+            <Property Name="NumItemAtendPortoSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_ITEM_ATEND_PORTO_SOC_EXT"/>
+            <Property Name="NumEndossoAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_ENDOSSO_ATEND_PT_SOC_EXT"/>
+            <Property Name="ValBrutoMovAtendPtSocExt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_BRUTO_MOV_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodRamPrincAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_RAM_PRINC_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodModPrincAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MOD_PRINC_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodigoMovAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MOV_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodOrigPropAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_ORIG_PROP_ATEND_PT_SOC_EXT"/>
+            <Property Name="NumeroPropAtendPtSocExt" Type="Edm.Decimal" Precision="12" Scale="0" sap:unicode="false" sap:label="NUMERO_PROP_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodOrigServAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_ORIG_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodCarteiraAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_CARTEIRA_ATEND_PT_SOC_EXT"/>
+            <Property Name="DescCarteiraAtendPtSocExt" Type="Edm.String" MaxLength="300" sap:unicode="false" sap:label="DESC_CARTEIRA_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodParametAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_PARAMET_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodClausulaAtendPtSocExt" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="COD_CLAUSULA_ATEND_PT_SOC_EXT"/>
+            <Property Name="TipoClausulaAtendPtSocExt" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="TIPO_CLAUSULA_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodDecorAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_DECOR_ATEND_PT_SOC_EXT"/>
+            <Property Name="DescDecorAtendPtSocExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="DESC_DECOR_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodDestServAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_DEST_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="DescDesServAtendPtSocExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="DESC_DES_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodBemAtenAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_BEM_ATEN_ATEND_PT_SOC_EXT"/>
+            <Property Name="DescBemAtenAtendPtSocExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="DESC_BEM_ATEN_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodGpoAssunAtendPtSocExt" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="COD_GPO_ASSUN_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodAssuntoAtendPtSocExt" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="COD_ASSUNTO_ATEND_PT_SOC_EXT"/>
+            <Property Name="DataEmiApolAtendPtSocExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMI_APOL_ATEND_PT_SOC_EXT"/>
+            <Property Name="DtIniVigApolAtPtSocExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VIG_APOL_AT_PT_SOC_EXT"/>
+            <Property Name="DtFiVigApoAtendPtSocExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FI_VIG_APO_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodCentCustAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_CENT_CUST_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodigoTpMovAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TP_MOV_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodigoSusepAtendPtSocExt" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="CODIGO_SUSEP_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodEmpresaAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_EMPRESA_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodTpDocCtAtendPtSocExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="COD_TP_DOC_CT_ATEND_PT_SOC_EXT"/>
+            <Property Name="NumCpfCnpjCtAtdPtSocExt" Type="Edm.String" MaxLength="14" sap:unicode="false" sap:label="NUM_CPF_CNPJ_CT_ATD_PT_SOC_EXT"/>
+            <Property Name="CodEspServAtendPtSocExt" Type="Edm.Decimal" Precision="12" Scale="0" sap:unicode="false" sap:label="COD_ESP_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="DescEspServAtendPtSocExt" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="DESC_ESP_SERV_ATEND_PT_SOC_EXT"/>
+            <Property Name="QtdDiaAutorAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="QTD_DIA_AUTOR_ATEND_PT_SOC_EXT"/>
+            <Property Name="QtdDiaPgAtendPtSocExt" Type="Edm.Int32" sap:unicode="false" sap:label="QTD_DIA_PG_ATEND_PT_SOC_EXT"/>
+            <Property Name="DescViaturaAtendPtSocExt" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="DESC_VIATURA_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodUsuaModAtendPtSocExt" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="COD_USUA_MOD_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodTpPrecAtendPtSocExt" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="COD_TP_PREC_ATEND_PT_SOC_EXT"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="CodAtenaReferenciaCorrecao" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="COD_ATENA_REFERENCIA_CORRECAO"/>
+            <Property Name="CorrelationId" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="CORRELATION_ID"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="SourceSystem" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="SOURCE_SYSTEM"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_SIS" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodigoSucursalSinSaudeExt"/>
+                <PropertyRef Name="CodigoRamo"/>
+                <PropertyRef Name="CodigoModalidade"/>
+                <PropertyRef Name="NumApoliceSinSaudeExtrato"/>
+                <PropertyRef Name="NumOrigemPropSinSaudeExt"/>
+                <PropertyRef Name="NumPropostaSinSaudeExtrato"/>
+                <PropertyRef Name="NumeroSequenciaMovimento"/>
+                <PropertyRef Name="DataEmiApoliceSinSaudeExt"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumeroVersaoLancamento"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="SubItem"/>
+                <PropertyRef Name="Item"/>
+                <PropertyRef Name="NumeroSinistro"/>
+                <PropertyRef Name="AnoSinistro"/>
+                <PropertyRef Name="CodigoRegimePagamento"/>
+                <PropertyRef Name="CodigoTipoSinistro"/>
+                <PropertyRef Name="CodigoConector"/>
+            </Key>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoSucursalSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL_SIN_SAUDE_EXT"/>
+            <Property Name="CodigoRamo" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="NumApoliceSinSaudeExtrato" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUM_APOLICE_SIN_SAUDE_EXTRATO"/>
+            <Property Name="NumOrigemPropSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_ORIGEM_PROP_SIN_SAUDE_EXT"/>
+            <Property Name="NumPropostaSinSaudeExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_PROPOSTA_SIN_SAUDE_EXTRATO"/>
+            <Property Name="NumeroSequenciaMovimento" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_MOVIMENTO"/>
+            <Property Name="DataEmiApoliceSinSaudeExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMI_APOLICE_SIN_SAUDE_EXT"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumeroVersaoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="Item" Type="Edm.String" MaxLength="13" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="NumeroSinistro" Type="Edm.Decimal" Precision="20" Scale="0" sap:unicode="false" sap:label="NUMERO_SINISTRO"/>
+            <Property Name="AnoSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_SINISTRO"/>
+            <Property Name="CodigoRegimePagamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_REGIME_PAGAMENTO"/>
+            <Property Name="CodigoTipoSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_SINISTRO"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="DtCompetenciaSinSaudeExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_COMPETENCIA_SIN_SAUDE_EXT"/>
+            <Property Name="DataAvisoSinistroSaudeExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_AVISO_SINISTRO_SAUDE_EXT"/>
+            <Property Name="DtOcorrenciaSinSaudeExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_OCORRENCIA_SIN_SAUDE_EXT"/>
+            <Property Name="DtEmiOrdemPagSinSaudeExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_EMI_ORDEM_PAG_SIN_SAUDE_EXT"/>
+            <Property Name="AnoOrdemPagSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_ORDEM_PAG_SIN_SAUDE_EXT"/>
+            <Property Name="NumeroOrdemPagSinSaudeExt" Type="Edm.Decimal" Precision="20" Scale="0" sap:unicode="false" sap:label="NUMERO_ORDEM_PAG_SIN_SAUDE_EXT"/>
+            <Property Name="ValorSinistroSinSaudeExt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_SINISTRO_SIN_SAUDE_EXT"/>
+            <Property Name="NumNotaFiscalSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_NOTA_FISCAL_SIN_SAUDE_EXT"/>
+            <Property Name="NumSerieNotFiscSinSauExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="NUM_SERIE_NOT_FISC_SIN_SAU_EXT"/>
+            <Property Name="DtEmiNotaFiscSinSaudeExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_EMI_NOTA_FISC_SIN_SAUDE_EXT"/>
+            <Property Name="FlagMovJuridSinSaudeExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="FLAG_MOV_JURID_SIN_SAUDE_EXT"/>
+            <Property Name="NumeroFaturaSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_FATURA_SIN_SAUDE_EXT"/>
+            <Property Name="CodTpCorrespSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_CORRESP_SIN_SAUDE_EXT"/>
+            <Property Name="NumPegRemessaSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_PEG_REMESSA_SIN_SAUDE_EXT"/>
+            <Property Name="CdSitCadMinSauSinSauExt" Type="Edm.Int32" sap:unicode="false" sap:label="CD_SIT_CAD_MIN_SAU_SIN_SAU_EXT"/>
+            <Property Name="CodigoModPagSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MOD_PAG_SIN_SAUDE_EXT"/>
+            <Property Name="CodigoTpAssistSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TP_ASSIST_SIN_SAUDE_EXT"/>
+            <Property Name="CodTpCoberturaSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_COBERTURA_SIN_SAUDE_EXT"/>
+            <Property Name="CodigoTpPlanoSinSaudeExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TP_PLANO_SIN_SAUDE_EXT"/>
+            <Property Name="CodTpContrataSinSaudeExt" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COD_TP_CONTRATA_SIN_SAUDE_EXT"/>
+            <Property Name="FlagReembolsoSinSaudeExt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_REEMBOLSO_SIN_SAUDE_EXT"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="CodAtenaReferenciaCorrecao" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="COD_ATENA_REFERENCIA_CORRECAO"/>
+            <Property Name="CorrelationId" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="CORRELATION_ID"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="SeqClasGerSinSaudClasGer" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="SEQ_CLAS_GER_SIN_SAUD_CLAS_GER"/>
+            <Property Name="CodClsGrCorpSinSauClsG" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="COD_CLS_GR_CORP_SIN_SAU_CLS_G"/>
+            <Property Name="DescClsGerSinSauClsGer" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="DESC_CLS_GER_SIN_SAU_CLS_GER"/>
+            <Property Name="VlrPagoSinSauClasGer" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VLR_PAGO_SIN_SAU_CLAS_GER"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="13" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="DtIniVigApoliceSinSau" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VIG_APOLICE_SIN_SAU"/>
+            <Property Name="SeqCodAtenaAux" Type="Edm.Int32" sap:unicode="false" sap:label="SEQ_COD_ATENA_AUX"/>
+            <Property Name="DtVencPrimParcSinSauExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_VENC_PRIM_PARC_SIN_SAU_EXT"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_CPG" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodigoSucursal"/>
+                <PropertyRef Name="CodigoRamo"/>
+                <PropertyRef Name="CodigoModalidade"/>
+                <PropertyRef Name="NumeroApolice"/>
+                <PropertyRef Name="NumeroEndosso"/>
+                <PropertyRef Name="CodigoOrigemProposta"/>
+                <PropertyRef Name="NumeroProposta"/>
+                <PropertyRef Name="NumeroSeguroParcela"/>
+                <PropertyRef Name="CodigoTransacaoComissao"/>
+                <PropertyRef Name="AnoOrdemPagamento"/>
+                <PropertyRef Name="NumeroOrdemPagamento"/>
+                <PropertyRef Name="CodigoSusepSeguroCorretor"/>
+                <PropertyRef Name="QuantidadeParcelaApolice"/>
+                <PropertyRef Name="DataPagamentoComissao"/>
+                <PropertyRef Name="CodigoConector"/>
+                <PropertyRef Name="SubItem"/>
+            </Key>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoSucursal" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+            <Property Name="CodigoRamo" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="NumeroApolice" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE"/>
+            <Property Name="NumeroEndosso" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ENDOSSO"/>
+            <Property Name="CodigoOrigemProposta" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_ORIGEM_PROPOSTA"/>
+            <Property Name="NumeroProposta" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_PROPOSTA"/>
+            <Property Name="NumeroSeguroParcela" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEGURO_PARCELA"/>
+            <Property Name="CodigoTransacaoComissao" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TRANSACAO_COMISSAO"/>
+            <Property Name="AnoOrdemPagamento" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_ORDEM_PAGAMENTO"/>
+            <Property Name="NumeroOrdemPagamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ORDEM_PAGAMENTO"/>
+            <Property Name="CodigoSusepSeguroCorretor" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="CODIGO_SUSEP_SEGURO_CORRETOR"/>
+            <Property Name="QuantidadeParcelaApolice" Type="Edm.Int32" sap:unicode="false" sap:label="QUANTIDADE_PARCELA_APOLICE"/>
+            <Property Name="DataPagamentoComissao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_PAGAMENTO_COMISSAO"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="ValorParcelaApolice" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_PARCELA_APOLICE"/>
+            <Property Name="PercentualTaxaComissao" Type="Edm.Decimal" Precision="5" Scale="2" sap:unicode="false" sap:label="PERCENTUAL_TAXA_COMISSAO"/>
+            <Property Name="ValorComissao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_COMISSAO"/>
+            <Property Name="DescricaoTransacaoComissao" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="DESCRICAO_TRANSACAO_COMISSAO"/>
+            <Property Name="NomeCorretor" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="NOME_CORRETOR"/>
+            <Property Name="NumCpfCnpjSeguroCorretor" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="NUM_CPF_CNPJ_SEGURO_CORRETOR"/>
+            <Property Name="CodigoCorretorSusep" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="CODIGO_CORRETOR_SUSEP"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="DataEnvioRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_ENVIO_REGISTRO"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="SourceSystem" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="SOURCE_SYSTEM"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="DtVencPrimeiraParcPagCom" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_VENC_PRIMEIRA_PARC_PAG_COM"/>
+            <Property Name="DtIniDeVigRiscoOrigPgCm" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_DE_VIG_RISCO_ORIG_PG_CM"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="CodigoPagamentoComissao" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_PAGAMENTO_COMISSAO"/>
+            <Property Name="FlagReferenciaApoliceSeguro" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_REFERENCIA_APOLICE_SEGURO"/>
+            <Property Name="CodCertificadoPrev" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="COD_CERTIFICADO_PREV"/>
+            <Property Name="CodPlanoPrevBeneficio" Type="Edm.Int32" sap:unicode="false" sap:label="COD_PLANO_PREV_BENEFICIO"/>
+            <Property Name="CodBeneficioPrevBeneficio" Type="Edm.Int32" sap:unicode="false" sap:label="COD_BENEFICIO_PREV_BENEFICIO"/>
+            <Property Name="CodPlanoSusepPlncodigo" Type="Edm.Int32" sap:unicode="false" sap:label="COD_PLANO_SUSEP_PLNCODIGO"/>
+            <Property Name="ProcessoSusepPrevExtrato" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="PROCESSO_SUSEP_PREV_EXTRATO"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_SGS" sap:content-version="1">
+        <Key>
+            <PropertyRef Name="Client"/>
+            <PropertyRef Name="CodigoEmpresa"/>
+            <PropertyRef Name="CodigoSucursal"/>
+            <PropertyRef Name="CodigoRamo"/>
+            <PropertyRef Name="CodigoModalidade"/>
+            <PropertyRef Name="NumeroApolice"/>
+            <PropertyRef Name="NumeroEndosso"/>
+            <PropertyRef Name="CodigoOrigemProposta"/>
+            <PropertyRef Name="NumeroProposta"/>
+            <PropertyRef Name="NumeroSequenciaDocumento"/>
+            <PropertyRef Name="DataEmissaoDocumento"/>
+            <PropertyRef Name="CodigoTipoLancamento"/>
+            <PropertyRef Name="NumeroVersaoLancamento"/>
+            <PropertyRef Name="CodigoEventoNegocio"/>
+            <PropertyRef Name="Item"/>
+            <PropertyRef Name="SubItem"/>
+            <PropertyRef Name="NumeroSeguroParcela"/>
+            <PropertyRef Name="CodigoConector"/>
+            <PropertyRef Name="CodigoMovimentoSusep"/>
+            <PropertyRef Name="NumeroEndossoReferencia"/>
+        </Key>
+        <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+        <Property Name="CodigoEmpresa" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+        <Property Name="CodigoSucursal" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+        <Property Name="CodigoRamo" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+        <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+        <Property Name="NumeroApolice" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE"/>
+        <Property Name="NumeroEndosso" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ENDOSSO"/>
+        <Property Name="CodigoOrigemProposta" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_ORIGEM_PROPOSTA"/>
+        <Property Name="NumeroProposta" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_PROPOSTA"/>
+        <Property Name="NumeroSequenciaDocumento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_DOCUMENTO"/>
+        <Property Name="DataEmissaoDocumento" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMISSAO_DOCUMENTO"/>
+        <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+        <Property Name="NumeroVersaoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+        <Property Name="CodigoEventoNegocio" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+        <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+        <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+        <Property Name="NumeroSeguroParcela" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEGURO_PARCELA"/>
+        <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+        <Property Name="CodigoMovimentoSusep" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_MOVIMENTO_SUSEP"/>
+        <Property Name="NumeroEndossoReferencia" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ENDOSSO_REFERENCIA"/>
+        <Property Name="NumeroCpfCnpjSeguroPessoa" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="NUMERO_CPF_CNPJ_SEGURO_PESSOA"/>
+        <Property Name="CodigoTpPessoaSeguroPessoa" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_TP_PESSOA_SEGURO_PESSOA"/>
+        <Property Name="DataLancamento" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_LANCAMENTO"/>
+        <Property Name="TransactionId" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="TRANSACTION_ID"/>
+        <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+        <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+        <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+        <Property Name="SourceSystem" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="SOURCE_SYSTEM"/>
+        <Property Name="SiglaUfEmissaoSegExtrato" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="SIGLA_UF_EMISSAO_SEG_EXTRATO"/>
+        <Property Name="SiglaMoedaSeguroExtrato" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="SIGLA_MOEDA_SEGURO_EXTRATO"/>
+        <Property Name="DataPropostaSeguroExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_PROPOSTA_SEGURO_EXTRATO"/>
+        <Property Name="DtConversaoMoedaSegExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_CONVERSAO_MOEDA_SEG_EXTRATO"/>
+        <Property Name="DtEmisRiscOrigApolSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_EMIS_RISC_ORIG_APOL_SEG_EXT"/>
+        <Property Name="DtIniVgRiscOrigApSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VG_RISC_ORIG_AP_SEG_EXT"/>
+        <Property Name="DtIniVgDocSeguroExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VG_DOC_SEGURO_EXTRATO"/>
+        <Property Name="DtFimVgDocApoliceSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VG_DOC_APOLICE_SEG_EXT"/>
+        <Property Name="DtFimVigenciaRiscoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VIGENCIA_RISCO_ORIGINAL"/>
+        <Property Name="NumProcAprovSusepSegExt" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="NUM_PROC_APROV_SUSEP_SEG_EXT"/>
+        <Property Name="NumRefOgCcSapFscdSegExt" Type="Edm.Decimal" Precision="15" Scale="0" sap:unicode="false" sap:label="NUM_REF_OG_CC_SAP_FSCD_SEG_EXT"/>
+        <Property Name="NumScoreSerasaSegExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_SCORE_SERASA_SEG_EXTRATO"/>
+        <Property Name="PercParticipacaoCiaSegExt" Type="Edm.Decimal" Precision="6" Scale="3" sap:unicode="false" sap:label="PERC_PARTICIPACAO_CIA_SEG_EXT"/>
+        <Property Name="ValPremioEmitidoSegParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_PREMIO_EMITIDO_SEG_PARCELA"/>
+        <Property Name="ValPremEmitidoServSegParc" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_PREM_EMITIDO_SERV_SEG_PARC"/>
+        <Property Name="ValAdFracSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_AD_FRAC_SEGURO_PARCELA"/>
+        <Property Name="ValMoraMultaSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_MORA_MULTA_SEGURO_PARCELA"/>
+        <Property Name="ValDescAbatSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_DESC_ABAT_SEGURO_PARCELA"/>
+        <Property Name="ValorIofSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_IOF_SEGURO_PARCELA"/>
+        <Property Name="ValPremRiscOrigSegParc" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_PREM_RISC_ORIG_SEG_PARC"/>
+        <Property Name="CodModPrincipalSegExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MOD_PRINCIPAL_SEG_EXT"/>
+        <Property Name="CodigoRamoPrincipalSegExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO_PRINCIPAL_SEG_EXT"/>
+        <Property Name="CodigoFormaPagamentoSegExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_FORMA_PAGAMENTO_SEG_EXT"/>
+        <Property Name="CodigoTipoEndossoSeguroExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_ENDOSSO_SEGURO_EXT"/>
+        <Property Name="NumVerItemOrcamentoSegExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_VER_ITEM_ORCAMENTO_SEG_EXT"/>
+        <Property Name="NumVerOrcamentoSegExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_VER_ORCAMENTO_SEG_EXTRATO"/>
+        <Property Name="CodCongenereSeguroExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="COD_CONGENERE_SEGURO_EXTRATO"/>
+        <Property Name="FlagResseguroSeguroExtrato" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_RESSEGURO_SEGURO_EXTRATO"/>
+        <Property Name="CodCanalVendaSeguroExtrato" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="COD_CANAL_VENDA_SEGURO_EXTRATO"/>
+        <Property Name="NomeCanalVendaSegExtrato" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_CANAL_VENDA_SEG_EXTRATO"/>
+        <Property Name="FlagFuncionarioSegExtrato" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_FUNCIONARIO_SEG_EXTRATO"/>
+        <Property Name="CodigoSegmentacaoBancaria" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SEGMENTACAO_BANCARIA"/>
+        <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+        <Property Name="CorrelationId" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="CORRELATION_ID"/>
+        <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+        <Property Name="CodigoTipoSeguro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_SEGURO"/>
+        <Property Name="CodigoTipoOperacaoEndosso" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_OPERACAO_ENDOSSO"/>
+        <Property Name="CodAtenaReferenciaCorrecao" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="COD_ATENA_REFERENCIA_CORRECAO"/>
+        <Property Name="CodTpCorrespSegExtSaude" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_CORRESP_SEG_EXT_SAUDE"/>
+        <Property Name="CodStMinSaudeSegExtSaude" Type="Edm.Int32" sap:unicode="false" sap:label="COD_ST_MIN_SAUDE_SEG_EXT_SAUDE"/>
+        <Property Name="CodRegPagSegExtratoSaude" Type="Edm.Int32" sap:unicode="false" sap:label="COD_REG_PAG_SEG_EXTRATO_SAUDE"/>
+        <Property Name="CodTpCobSegExtratoSaude" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_COB_SEG_EXTRATO_SAUDE"/>
+        <Property Name="CodTpPlanoSegExtratoSaude" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_PLANO_SEG_EXTRATO_SAUDE"/>
+        <Property Name="CodTpPrestSegExtratoSaude" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="COD_TP_PREST_SEG_EXTRATO_SAUDE"/>
+        <Property Name="NumeroFaturaSegExtSaude" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_FATURA_SEG_EXT_SAUDE"/>
+        <Property Name="CodTpContrataSegExtSaude" Type="Edm.Int32" sap:unicode="false" sap:label="COD_TP_CONTRATA_SEG_EXT_SAUDE"/>
+        <Property Name="Script" Type="Edm.String" MaxLength="150" sap:unicode="false" sap:label="SCRIPT"/>
+        <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+        <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+        <Property Name="DtInicioVigenciaSegParc" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INICIO_VIGENCIA_SEG_PARC"/>
+        <Property Name="DtFimVigenciaSegParc" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VIGENCIA_SEG_PARC"/>
+        <Property Name="TransactionType" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+        <Property Name="FlagVigente" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="FLAG_VIGENTE"/>
+        <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+        <Property Name="ItcLegalEntity" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="ITC_LEGAL_ENTITY"/>
+        <Property Name="ItcTipo" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="ITC_TIPO"/>
+        <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+        <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+        <Property Name="NumeroSequenciaPagamento" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_PAGAMENTO"/>
+        <Property Name="ValorMoraMultaTotalSegExt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_MORA_MULTA_TOTAL_SEG_EXT"/>
+        <Property Name="DtVencPrimeiraParcSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_VENC_PRIMEIRA_PARC_SEG_EXT"/>
+        <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+        <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        <Property Name="CodigoTipoApolice" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_APOLICE"/>
+        <Property Name="ValCustoSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_CUSTO_SEGURO_PARCELA"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_TAB_STG" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="CodigoConector"/>
+                <PropertyRef Name="Tabela"/>
+            </Key>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="Tabela" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="TABELA"/>
+            <Property Name="TotalRegistros" Type="Edm.Int32" sap:unicode="false" sap:label="TOTAL_REGISTROS"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_PRE" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodigoSucursal"/>
+                <PropertyRef Name="CodigoRamo"/>
+                <PropertyRef Name="CodigoModalidade"/>
+                <PropertyRef Name="NumeroApolice"/>
+                <PropertyRef Name="NumeroEndosso"/>
+                <PropertyRef Name="CodigoOrigemProposta"/>
+                <PropertyRef Name="NumeroProposta"/>
+                <PropertyRef Name="NumeroSequenciaDocumento"/>
+                <PropertyRef Name="DataEmissaoDocumento"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumeroVersaoLancamento"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="NumeroSeguroParcela"/>
+                <PropertyRef Name="Item"/>
+                <PropertyRef Name="NumeroSeguroItem"/>
+                <PropertyRef Name="CodigoConector"/>
+                <PropertyRef Name="SubItem"/>
+                <PropertyRef Name="NumeroSequenciaPagamento"/>
+                <PropertyRef Name="CodigoMovimentoSusep"/>
+                <PropertyRef Name="NumeroEndossoReferencia"/>
+            </Key>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoSucursal" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+            <Property Name="CodigoRamo" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="NumeroApolice" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE"/>
+            <Property Name="NumeroEndosso" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ENDOSSO"/>
+            <Property Name="CodigoOrigemProposta" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_ORIGEM_PROPOSTA"/>
+            <Property Name="NumeroProposta" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_PROPOSTA"/>
+            <Property Name="NumeroSequenciaDocumento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_DOCUMENTO"/>
+            <Property Name="DataEmissaoDocumento" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMISSAO_DOCUMENTO"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumeroVersaoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="NumeroSeguroParcela" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEGURO_PARCELA"/>
+            <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="NumeroSeguroItem" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEGURO_ITEM"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="NumeroSequenciaPagamento" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_PAGAMENTO"/>
+            <Property Name="CodigoMovimentoSusep" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_MOVIMENTO_SUSEP"/>
+            <Property Name="NumeroEndossoReferencia" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ENDOSSO_REFERENCIA"/>
+            <Property Name="NumeroCpfCnpjSeguroPessoa" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="NUMERO_CPF_CNPJ_SEGURO_PESSOA"/>
+            <Property Name="CodigoTpPessoaSeguroPessoa" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_TP_PESSOA_SEGURO_PESSOA"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="CodigoSegmentacaoBancaria" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SEGMENTACAO_BANCARIA"/>
+            <Property Name="CodigoTipoSeguro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_SEGURO"/>
+            <Property Name="CodigoTipoOperacaoEndosso" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_OPERACAO_ENDOSSO"/>
+            <Property Name="SiglaUfEmissaoSegExtrato" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="SIGLA_UF_EMISSAO_SEG_EXTRATO"/>
+            <Property Name="SiglaMoedaSeguroExtrato" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="SIGLA_MOEDA_SEGURO_EXTRATO"/>
+            <Property Name="DataPropostaSeguroExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_PROPOSTA_SEGURO_EXTRATO"/>
+            <Property Name="DtConversaoMoedaSegExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_CONVERSAO_MOEDA_SEG_EXTRATO"/>
+            <Property Name="DtEmisRiscOrigApolSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_EMIS_RISC_ORIG_APOL_SEG_EXT"/>
+            <Property Name="DtIniVgRiscOrigApSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VG_RISC_ORIG_AP_SEG_EXT"/>
+            <Property Name="DtIniVgDocSeguroExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_INI_VG_DOC_SEGURO_EXTRATO"/>
+            <Property Name="DtFimVgDocApoliceSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VG_DOC_APOLICE_SEG_EXT"/>
+            <Property Name="DtFimVigenciaRiscoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_FIM_VIGENCIA_RISCO_ORIGINAL"/>
+            <Property Name="NumProcAprovSusepSegExt" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="NUM_PROC_APROV_SUSEP_SEG_EXT"/>
+            <Property Name="NumRefOgCcSapFscdSegExt" Type="Edm.Decimal" Precision="15" Scale="0" sap:unicode="false" sap:label="NUM_REF_OG_CC_SAP_FSCD_SEG_EXT"/>
+            <Property Name="NumScoreSerasaSegExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_SCORE_SERASA_SEG_EXTRATO"/>
+            <Property Name="PercParticipacaoCiaSegExt" Type="Edm.Decimal" Precision="6" Scale="3" sap:unicode="false" sap:label="PERC_PARTICIPACAO_CIA_SEG_EXT"/>
+            <Property Name="CodModPrincipalSegExt" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MOD_PRINCIPAL_SEG_EXT"/>
+            <Property Name="CodigoRamoPrincipalSegExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO_PRINCIPAL_SEG_EXT"/>
+            <Property Name="CodigoFormaPagamentoSegExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_FORMA_PAGAMENTO_SEG_EXT"/>
+            <Property Name="CodigoTipoEndossoSeguroExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_ENDOSSO_SEGURO_EXT"/>
+            <Property Name="NumVerItemOrcamentoSegExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_VER_ITEM_ORCAMENTO_SEG_EXT"/>
+            <Property Name="NumVerOrcamentoSegExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_VER_ORCAMENTO_SEG_EXTRATO"/>
+            <Property Name="CodCongenereSeguroExtrato" Type="Edm.Int32" sap:unicode="false" sap:label="COD_CONGENERE_SEGURO_EXTRATO"/>
+            <Property Name="FlagResseguroSeguroExtrato" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_RESSEGURO_SEGURO_EXTRATO"/>
+            <Property Name="CodCanalVendaSeguroExtrato" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="COD_CANAL_VENDA_SEGURO_EXTRATO"/>
+            <Property Name="NomeCanalVendaSegExtrato" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="NOME_CANAL_VENDA_SEG_EXTRATO"/>
+            <Property Name="FlagFuncionarioSegExtrato" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_FUNCIONARIO_SEG_EXTRATO"/>
+            <Property Name="ValClauSeguroItemClausula" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_CLAU_SEGURO_ITEM_CLAUSULA"/>
+            <Property Name="CorrelationId" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="CORRELATION_ID"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="CodAtenaReferenciaCorrecao" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="COD_ATENA_REFERENCIA_CORRECAO"/>
+            <Property Name="ValPremioEmitidoSegParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_PREMIO_EMITIDO_SEG_PARCELA"/>
+            <Property Name="ValPremEmitidoServSegParc" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_PREM_EMITIDO_SERV_SEG_PARC"/>
+            <Property Name="ValAdFracSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VAL_AD_FRAC_SEGURO_PARCELA"/>
+            <Property Name="ValorIofSeguroParcela" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_IOF_SEGURO_PARCELA"/>
+            <Property Name="DataVencimentoSeguroParcela" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_VENCIMENTO_SEGURO_PARCELA"/>
+            <Property Name="SourceSystem" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="SOURCE_SYSTEM"/>
+            <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="ItcLegalEntity" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="ITC_LEGAL_ENTITY"/>
+            <Property Name="ItcTipo" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="ITC_TIPO"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="DtVencPrimeiraParcSegExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_VENC_PRIMEIRA_PARC_SEG_EXT"/>
+            <Property Name="NumeroApoliceOriginalAzul" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="NUMERO_APOLICE_ORIGINAL_AZUL"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+            <Property Name="CodigoTipoApolice" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_APOLICE"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_SIN" sap:content-version="1">
+            <Key>
+            <PropertyRef Name="Client"/>
+            <PropertyRef Name="CodigoEmpresa"/>
+            <PropertyRef Name="CodigoRamo"/>
+            <PropertyRef Name="CodigoModalidade"/>
+            <PropertyRef Name="NumeroSinistroServico"/>
+            <PropertyRef Name="AnoSinistroServico"/>
+            <PropertyRef Name="NumeroItemApolice"/>
+            <PropertyRef Name="NumeroOrdemSinistro"/>
+            <PropertyRef Name="CodigoEventoNegocio"/>
+            <PropertyRef Name="CodigoMovimentoSinistro"/>
+            <PropertyRef Name="NumeroSequenciaMovimentoSin"/>
+            <PropertyRef Name="CodigoTipoLancamento"/>
+            <PropertyRef Name="NumeroVersaoLancamento"/>
+            <PropertyRef Name="Item"/>
+            <PropertyRef Name="SubItem"/>
+            <PropertyRef Name="CodigoSucursalSinistroExt"/>
+            <PropertyRef Name="NumeroApoliceSinistroExt"/>
+            <PropertyRef Name="CodigoConector"/>
+            </Key>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoRamo" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="NumeroSinistroServico" Type="Edm.Decimal" Precision="20" Scale="0" sap:unicode="false" sap:label="NUMERO_SINISTRO_SERVICO"/>
+            <Property Name="AnoSinistroServico" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_SINISTRO_SERVICO"/>
+            <Property Name="NumeroItemApolice" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ITEM_APOLICE"/>
+            <Property Name="NumeroOrdemSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ORDEM_SINISTRO"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="CodigoMovimentoSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MOVIMENTO_SINISTRO"/>
+            <Property Name="NumeroSequenciaMovimentoSin" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_MOVIMENTO_SIN"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumeroVersaoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+            <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoSucursalSinistroExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL_SINISTRO_EXT"/>
+            <Property Name="NumeroApoliceSinistroExt" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE_SINISTRO_EXT"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="NumeroEndossoSinistroExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ENDOSSO_SINISTRO_EXT"/>
+            <Property Name="CodigoOrigemPropostaSinExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_ORIGEM_PROPOSTA_SIN_EXT"/>
+            <Property Name="NumeroPropostaSinistroExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_PROPOSTA_SINISTRO_EXT"/>
+            <Property Name="DataEmissaoApoliceSinExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMISSAO_APOLICE_SIN_EXT"/>
+            <Property Name="DataAvisoEventoSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_AVISO_EVENTO_SINISTRO_EXT"/>
+            <Property Name="DataOcorrenciaSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_OCORRENCIA_SINISTRO_EXT"/>
+            <Property Name="DataOperacaoSinistroExtrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_OPERACAO_SINISTRO_EXTRATO"/>
+            <Property Name="DataEmissaoOrdemPagSinExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMISSAO_ORDEM_PAG_SIN_EXT"/>
+            <Property Name="DataInicioVigSegSinExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INICIO_VIG_SEG_SIN_EXT"/>
+            <Property Name="DataFimVigenciaSegSinExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_FIM_VIGENCIA_SEG_SIN_EXT"/>
+            <Property Name="DataMovimentoSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MOVIMENTO_SINISTRO_EXT"/>
+            <Property Name="NumeroOrdemPagamentoSinExt" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="NUMERO_ORDEM_PAGAMENTO_SIN_EXT"/>
+            <Property Name="AnoOrdemPagamentoSinExt" Type="Edm.Int32" sap:unicode="false" sap:label="ANO_ORDEM_PAGAMENTO_SIN_EXT"/>
+            <Property Name="NumProcAprovSusepSinExt" Type="Edm.Int32" sap:unicode="false" sap:label="NUM_PROC_APROV_SUSEP_SIN_EXT"/>
+            <Property Name="ValorSinistroSinistroExt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_SINISTRO_SINISTRO_EXT"/>
+            <Property Name="CodigoModPrincSinExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MOD_PRINC_SIN_EXT"/>
+            <Property Name="CodigoRamoPrincipalSinExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO_PRINCIPAL_SIN_EXT"/>
+            <Property Name="CodigoGrupoRamoSinistroExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_GRUPO_RAMO_SINISTRO_EXT"/>
+            <Property Name="NumeroNotaFiscalSinExt" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_NOTA_FISCAL_SIN_EXT"/>
+            <Property Name="NumSerieNotaFiscalSinExt" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="NUM_SERIE_NOTA_FISCAL_SIN_EXT"/>
+            <Property Name="DtEmissaoNotaFiscalSinExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_EMISSAO_NOTA_FISCAL_SIN_EXT"/>
+            <Property Name="FlagMovJuridicoItSinExt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_MOV_JURIDICO_IT_SIN_EXT"/>
+            <Property Name="CodigoNaturezaSinSinExt" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_NATUREZA_SIN_SIN_EXT"/>
+            <Property Name="CodigoTipoPerdaSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_PERDA_SINISTRO"/>
+            <Property Name="CodigoTipoOperacaoSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_OPERACAO_SINISTRO"/>
+            <Property Name="FlagSinNaoOficialSinExt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_SIN_NAO_OFICIAL_SIN_EXT"/>
+            <Property Name="CodigoCatGrauRiscSinExt" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="CODIGO_CAT_GRAU_RISC_SIN_EXT"/>
+            <Property Name="ValorFranquiaSinistroExt" Type="Edm.Decimal" Precision="15" Scale="0" sap:unicode="false" sap:label="VALOR_FRANQUIA_SINISTRO_EXT"/>
+            <Property Name="ValorImportanciaSegSinExt" Type="Edm.Decimal" Precision="15" Scale="0" sap:unicode="false" sap:label="VALOR_IMPORTANCIA_SEG_SIN_EXT"/>
+            <Property Name="FlagResseguroSinistroExt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_RESSEGURO_SINISTRO_EXT"/>
+            <Property Name="ValorCorrecaoMonSinExt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_CORRECAO_MON_SIN_EXT"/>
+            <Property Name="CodigoSituacaoSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CODIGO_SITUACAO_SINISTRO_EXT"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="CodAtenaReferenciaCorrecao" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="COD_ATENA_REFERENCIA_CORRECAO"/>
+            <Property Name="CorrelationId" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="CORRELATION_ID"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="DtVencPrimParcSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_VENC_PRIM_PARC_SINISTRO_EXT"/>
+            <Property Name="FlagUsoLimMaxSinSegExt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_USO_LIM_MAX_SIN_SEG_EXT"/>
+            <Property Name="VlJuroSinistroJudSinExt" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VL_JURO_SINISTRO_JUD_SIN_EXT"/>
+            <Property Name="DtEntregaDocSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DT_ENTREGA_DOC_SINISTRO_EXT"/>
+            <Property Name="DescJustifNegativaSinExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="DESC_JUSTIF_NEGATIVA_SIN_EXT"/>
+            <Property Name="SourceSystem" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="SOURCE_SYSTEM"/>
+            <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="12" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="GrupoRamoPassivo" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="GRUPO_RAMO_PASSIVO"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="NumeroApoliceOriginalAzul" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="NUMERO_APOLICE_ORIGINAL_AZUL"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+            <Property Name="CodigoOrigemSinistro" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_ORIGEM_SINISTRO"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_R_PRE" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodigoSucursal"/>
+                <PropertyRef Name="CodigoRamo"/>
+                <PropertyRef Name="CodigoModalidade"/>
+                <PropertyRef Name="NumeroApolice"/>
+                <PropertyRef Name="NumeroEndosso"/>
+                <PropertyRef Name="CodigoOrigemProposta"/>
+                <PropertyRef Name="NumeroProposta"/>
+                <PropertyRef Name="CodigoContratoResseguro"/>
+                <PropertyRef Name="NumeroSequenciaDocumento"/>
+                <PropertyRef Name="DataEmissaoDocumento"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumeroVersaoLancamento"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="NumeroSequenciaPagamento"/>
+                <PropertyRef Name="CodigoMovimentoSusep"/>
+                <PropertyRef Name="NumeroEndossoReferencia"/>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="Item"/>
+                <PropertyRef Name="SubItem"/>
+                <PropertyRef Name="CodigoContaResseguroSap"/>
+                <PropertyRef Name="NumRefCalculoResseguroSap"/>
+                <PropertyRef Name="CodigoResseguradorSusep"/>
+            </Key>
+            <Property Name="CodigoEmpresa" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoSucursal" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+            <Property Name="CodigoRamo" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoModalidade" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="NumeroApolice" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE"/>
+            <Property Name="NumeroEndosso" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="NUMERO_ENDOSSO"/>
+            <Property Name="CodigoOrigemProposta" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_ORIGEM_PROPOSTA"/>
+            <Property Name="NumeroProposta" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_PROPOSTA"/>
+            <Property Name="CodigoContratoResseguro" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="CODIGO_CONTRATO_RESSEGURO"/>
+            <Property Name="NumeroSequenciaDocumento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_DOCUMENTO"/>
+            <Property Name="DataEmissaoDocumento" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_EMISSAO_DOCUMENTO"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumeroVersaoLancamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="NumeroSequenciaPagamento" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_PAGAMENTO"/>
+            <Property Name="CodigoMovimentoSusep" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_MOVIMENTO_SUSEP"/>
+            <Property Name="NumeroEndossoReferencia" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_ENDOSSO_REFERENCIA"/>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoContaResseguroSap" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="CODIGO_CONTA_RESSEGURO_SAP"/>
+            <Property Name="NumRefCalculoResseguroSap" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="NUM_REF_CALCULO_RESSEGURO_SAP"/>
+            <Property Name="CodigoResseguradorSusep" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RESSEGURADOR_SUSEP"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="DataCompetencia" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_COMPETENCIA"/>
+            <Property Name="ValorMovimentoResseguro" Type="Edm.Decimal" Precision="15" Scale="5" sap:unicode="false" sap:label="VALOR_MOVIMENTO_RESSEGURO"/>
+            <Property Name="ValorMovimentoServicoRess" Type="Edm.Decimal" Precision="15" Scale="5" sap:unicode="false" sap:label="VALOR_MOVIMENTO_SERVICO_RESS"/>
+            <Property Name="ValorAdicionalFracionPremio" Type="Edm.Decimal" Precision="15" Scale="5" sap:unicode="false" sap:label="VALOR_ADICIONAL_FRACION_PREMIO"/>
+            <Property Name="ValorComissaoFixa" Type="Edm.Decimal" Precision="15" Scale="5" sap:unicode="false" sap:label="VALOR_COMISSAO_FIXA"/>
+            <Property Name="ValorAdicFracionComissao" Type="Edm.Decimal" Precision="15" Scale="5" sap:unicode="false" sap:label="VALOR_ADIC_FRACION_COMISSAO"/>
+            <Property Name="ValorImpostoRenda" Type="Edm.Decimal" Precision="15" Scale="5" sap:unicode="false" sap:label="VALOR_IMPOSTO_RENDA"/>
+            <Property Name="SiglaMoedaSeguroExtrato" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="SIGLA_MOEDA_SEGURO_EXTRATO"/>
+            <Property Name="CodigoTipoRessegurador" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_RESSEGURADOR"/>
+            <Property Name="CodigoTipoEstrutura" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_TIPO_ESTRUTURA"/>
+            <Property Name="CodBaseCoberturaResseguro" Type="Edm.Int32" sap:unicode="false" sap:label="COD_BASE_COBERTURA_RESSEGURO"/>
+            <Property Name="CodModalidadeContratoRess" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MODALIDADE_CONTRATO_RESS"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+            <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="CodLegalEntity" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="COD_LEGAL_ENTITY"/>
+            <Property Name="FlagMovimentoJuridicoOrdem" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_MOVIMENTO_JURIDICO_ORDEM"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="5" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataInicioVigenciaContrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INICIO_VIGENCIA_CONTRATO"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_R_SIN" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodigoRamo"/>
+                <PropertyRef Name="CodigoModalidade"/>
+                <PropertyRef Name="NumeroOrdemSinistro"/>
+                <PropertyRef Name="NumeroSinistro"/>
+                <PropertyRef Name="AnoSinistro"/>
+                <PropertyRef Name="NumeroItemApolice"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="CodigoMovimentoSusep"/>
+                <PropertyRef Name="NumeroSequenciaMovSinistro"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumeroVersaoLancamento"/>
+                <PropertyRef Name="CodigoContratoResseguro"/>
+                <PropertyRef Name="Item"/>
+                <PropertyRef Name="SubItem"/>
+                <PropertyRef Name="CodigoSucursal"/>
+            </Key>
+            <Property Name="CodigoEmpresa" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoRamo" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoModalidade" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="NumeroOrdemSinistro" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="NUMERO_ORDEM_SINISTRO"/>
+            <Property Name="NumeroSinistro" Type="Edm.Decimal" Precision="20" Scale="0" sap:unicode="false" sap:label="NUMERO_SINISTRO"/>
+            <Property Name="AnoSinistro" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="ANO_SINISTRO"/>
+            <Property Name="NumeroItemApolice" Type="Edm.Int32" sap:unicode="false" sap:label="NUMERO_ITEM_APOLICE"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="CodigoMovimentoSusep" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_MOVIMENTO_SUSEP"/>
+            <Property Name="NumeroSequenciaMovSinistro" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="NUMERO_SEQUENCIA_MOV_SINISTRO"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumeroVersaoLancamento" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_VERSAO_LANCAMENTO"/>
+            <Property Name="CodigoContratoResseguro" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="CODIGO_CONTRATO_RESSEGURO"/>
+            <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoSucursal" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="DataMovimentoResseguro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MOVIMENTO_RESSEGURO"/>
+            <Property Name="ValorMovimentoResseguro" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_MOVIMENTO_RESSEGURO"/>
+            <Property Name="DataOcorrenciaSinistroExt" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_OCORRENCIA_SINISTRO_EXT"/>
+            <Property Name="CodigoTipoRessegurador" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_RESSEGURADOR"/>
+            <Property Name="FlagMovimentoJuridicoOrdem" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_MOVIMENTO_JURIDICO_ORDEM"/>
+            <Property Name="CodigoTipoEstrutura" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_TIPO_ESTRUTURA"/>
+            <Property Name="CodBaseCoberturaResseguro" Type="Edm.Int32" sap:unicode="false" sap:label="COD_BASE_COBERTURA_RESSEGURO"/>
+            <Property Name="CodModalidadeContratoRess" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MODALIDADE_CONTRATO_RESS"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+            <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="CodLegalEntity" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="COD_LEGAL_ENTITY"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataInicioVigenciaContrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INICIO_VIGENCIA_CONTRATO"/>
+            <Property Name="ValorCorrecaoMonetaria" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_CORRECAO_MONETARIA"/>
+            <Property Name="ValorJurosSinistroJudicial" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_JUROS_SINISTRO_JUDICIAL"/>
+            <Property Name="CodigoContaResseguroSap" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="CODIGO_CONTA_RESSEGURO_SAP"/>
+            <Property Name="NumRefCalculoResseguroSap" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="NUM_REF_CALCULO_RESSEGURO_SAP"/>
+            <Property Name="CodigoResseguradorSusep" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RESSEGURADOR_SUSEP"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+            <Property Name="NumeroApolice" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUMERO_APOLICE"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_R_PPR" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="CodigoEmpresa"/>
+                <PropertyRef Name="CodSucursalPrevidenciaExt"/>
+                <PropertyRef Name="CodigoRamo"/>
+                <PropertyRef Name="CodModalidadePrevidenciaExt"/>
+                <PropertyRef Name="NumApolicePrevidenciaExt"/>
+                <PropertyRef Name="CodCertificadoPrevExt"/>
+                <PropertyRef Name="CodigoPlanoPrevidenciaExt"/>
+                <PropertyRef Name="CodBeneficioPrevidenciaExt"/>
+                <PropertyRef Name="CodigoPlanoSusepPlncodigo"/>
+                <PropertyRef Name="CodigoContratoResseguro"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumVersaoLancPrevExt"/>
+                <PropertyRef Name="Client"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="Item"/>
+                <PropertyRef Name="SubItem"/>
+                <PropertyRef Name="CodigoContaResseguroSap"/>
+                <PropertyRef Name="NumRefCalculoResseguroSap"/>
+                <PropertyRef Name="CodigoResseguradorSusep"/>
+            </Key>
+            <Property Name="CodigoEmpresa" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodSucursalPrevidenciaExt" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="COD_SUCURSAL_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoRamo" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodModalidadePrevidenciaExt" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="COD_MODALIDADE_PREVIDENCIA_EXT"/>
+            <Property Name="NumApolicePrevidenciaExt" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="NUM_APOLICE_PREVIDENCIA_EXT"/>
+            <Property Name="CodCertificadoPrevExt" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="COD_CERTIFICADO_PREV_EXT"/>
+            <Property Name="CodigoPlanoPrevidenciaExt" Type="Edm.Decimal" Precision="4" Scale="0" sap:unicode="false" sap:label="CODIGO_PLANO_PREVIDENCIA_EXT"/>
+            <Property Name="CodBeneficioPrevidenciaExt" Type="Edm.Decimal" Precision="3" Scale="0" sap:unicode="false" sap:label="COD_BENEFICIO_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoPlanoSusepPlncodigo" Type="Edm.Decimal" Precision="5" Scale="0" sap:unicode="false" sap:label="CODIGO_PLANO_SUSEP_PLNCODIGO"/>
+            <Property Name="CodigoContratoResseguro" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="CODIGO_CONTRATO_RESSEGURO"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumVersaoLancPrevExt" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="NUM_VERSAO_LANC_PREV_EXT"/>
+            <Property Name="Client" Type="Edm.Int32" sap:unicode="false" sap:label="CLIENT"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoContaResseguroSap" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="CODIGO_CONTA_RESSEGURO_SAP"/>
+            <Property Name="NumRefCalculoResseguroSap" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="NUM_REF_CALCULO_RESSEGURO_SAP"/>
+            <Property Name="CodigoResseguradorSusep" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RESSEGURADOR_SUSEP"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="DataCompetencia" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_COMPETENCIA"/>
+            <Property Name="ValorMovimentoResseguro" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_MOVIMENTO_RESSEGURO"/>
+            <Property Name="NumProcAprovadoSusepSegEx" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="NUM_PROC_APROVADO_SUSEP_SEG_EX"/>
+            <Property Name="CodigoTipoRessegurador" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_RESSEGURADOR"/>
+            <Property Name="CodigoTipoEstrutura" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_TIPO_ESTRUTURA"/>
+            <Property Name="CodBaseCoberturaResseguro" Type="Edm.Int32" sap:unicode="false" sap:label="COD_BASE_COBERTURA_RESSEGURO"/>
+            <Property Name="CodModalidadeContratoRess" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MODALIDADE_CONTRATO_RESS"/>
+            <Property Name="CodigoMoeda" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="CODIGO_MOEDA"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+            <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="CodLegalEntity" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="COD_LEGAL_ENTITY"/>
+            <Property Name="FlagMovimentoJuridicoOrdem" Type="Edm.String" MaxLength="13" sap:unicode="false" sap:label="FLAG_MOVIMENTO_JURIDICO_ORDEM"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="5" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataInicioVigenciaContrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INICIO_VIGENCIA_CONTRATO"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+
+
+        <EntityType Name="ZPSTA_STG_BT_R_PSI" sap:content-version="1">
+            <Key>
+                <PropertyRef Name="CodigoOperacao"/>
+                <PropertyRef Name="CodIdentDocEventoPrevExt"/>
+                <PropertyRef Name="NumeroMovimentoPrevExt"/>
+                <PropertyRef Name="NumeroDetalheMovPrevExt"/>
+                <PropertyRef Name="CodigoReservaPrevidenciaExt"/>
+                <PropertyRef Name="CodigoFundoReservaPrevExt"/>
+                <PropertyRef Name="CodigoTipoLancamento"/>
+                <PropertyRef Name="NumVersaoLancPrevExt"/>
+                <PropertyRef Name="CodRotContEventoNegParam"/>
+                <PropertyRef Name="CodigoEventoNegocio"/>
+                <PropertyRef Name="Item"/>
+                <PropertyRef Name="SubItem"/>
+                <PropertyRef Name="CodigoContaResseguroSap"/>
+                <PropertyRef Name="NumRefCalculoResseguroSap"/>
+                <PropertyRef Name="CodigoResseguradorSusep"/>
+            </Key>
+            <Property Name="CodigoOperacao" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="CODIGO_OPERACAO"/>
+            <Property Name="CodIdentDocEventoPrevExt" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="COD_IDENT_DOC_EVENTO_PREV_EXT"/>
+            <Property Name="NumeroMovimentoPrevExt" Type="Edm.Decimal" Precision="15" Scale="0" sap:unicode="false" sap:label="NUMERO_MOVIMENTO_PREV_EXT"/>
+            <Property Name="NumeroDetalheMovPrevExt" Type="Edm.Decimal" Precision="15" Scale="0" sap:unicode="false" sap:label="NUMERO_DETALHE_MOV_PREV_EXT"/>
+            <Property Name="CodigoReservaPrevidenciaExt" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="CODIGO_RESERVA_PREVIDENCIA_EXT"/>
+            <Property Name="CodigoFundoReservaPrevExt" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="CODIGO_FUNDO_RESERVA_PREV_EXT"/>
+            <Property Name="CodigoTipoLancamento" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="CODIGO_TIPO_LANCAMENTO"/>
+            <Property Name="NumVersaoLancPrevExt" Type="Edm.Decimal" Precision="8" Scale="0" sap:unicode="false" sap:label="NUM_VERSAO_LANC_PREV_EXT"/>
+            <Property Name="CodRotContEventoNegParam" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="COD_ROT_CONT_EVENTO_NEG_PARAM"/>
+            <Property Name="CodigoEventoNegocio" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EVENTO_NEGOCIO"/>
+            <Property Name="Item" Type="Edm.Int32" sap:unicode="false" sap:label="ITEM"/>
+            <Property Name="SubItem" Type="Edm.Int32" sap:unicode="false" sap:label="SUB_ITEM"/>
+            <Property Name="CodigoContaResseguroSap" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="CODIGO_CONTA_RESSEGURO_SAP"/>
+            <Property Name="NumRefCalculoResseguroSap" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="NUM_REF_CALCULO_RESSEGURO_SAP"/>
+            <Property Name="CodigoResseguradorSusep" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_RESSEGURADOR_SUSEP"/>
+            <Property Name="CodigoEmpresa" Type="Edm.Decimal" Precision="10" Scale="0" sap:unicode="false" sap:label="CODIGO_EMPRESA"/>
+            <Property Name="CodigoAtena" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_ATENA"/>
+            <Property Name="DataCompetencia" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_COMPETENCIA"/>
+            <Property Name="CodigoContratoResseguro" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="CODIGO_CONTRATO_RESSEGURO"/>
+            <Property Name="ValorMovimentoResseguro" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="VALOR_MOVIMENTO_RESSEGURO"/>
+            <Property Name="CodigoRamo" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_RAMO"/>
+            <Property Name="CodigoSucursal" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_SUCURSAL"/>
+            <Property Name="NumeroSinistro" Type="Edm.Decimal" Precision="20" Scale="0" sap:unicode="false" sap:label="NUMERO_SINISTRO"/>
+            <Property Name="AnoSinistro" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="ANO_SINISTRO"/>
+            <Property Name="DataOcorrenciaPrevExtSin" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_OCORRENCIA_PREV_EXT_SIN"/>
+            <Property Name="CodigoPlanoSusepPlncodigo" Type="Edm.Decimal" Precision="5" Scale="0" sap:unicode="false" sap:label="CODIGO_PLANO_SUSEP_PLNCODIGO"/>
+            <Property Name="ProcessoSusepPrevidenciaExt" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="PROCESSO_SUSEP_PREVIDENCIA_EXT"/>
+            <Property Name="FlagMovimentoJuridicoOrdem" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="FLAG_MOVIMENTO_JURIDICO_ORDEM"/>
+            <Property Name="CodigoTipoRessegurador" Type="Edm.Int32" sap:unicode="false" sap:label="CODIGO_TIPO_RESSEGURADOR"/>
+            <Property Name="CodigoTipoEstrutura" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CODIGO_TIPO_ESTRUTURA"/>
+            <Property Name="CodBaseCoberturaResseguro" Type="Edm.Int32" sap:unicode="false" sap:label="COD_BASE_COBERTURA_RESSEGURO"/>
+            <Property Name="CodModalidadeContratoRess" Type="Edm.Int32" sap:unicode="false" sap:label="COD_MODALIDADE_CONTRATO_RESS"/>
+            <Property Name="CodigoMoeda" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="CODIGO_MOEDA"/>
+            <Property Name="TransactionType" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="TRANSACTION_TYPE"/>
+            <Property Name="MontanteTransacao" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="MONTANTE_TRANSACAO"/>
+            <Property Name="CampoOriginal" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="CAMPO_ORIGINAL"/>
+            <Property Name="CodigoConector" Type="Edm.Decimal" Precision="28" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="DataInclusaoRegistro" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INCLUSAO_REGISTRO"/>
+            <Property Name="DataModificacao" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_MODIFICACAO"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
+            <Property Name="Comments" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/>
+            <Property Name="OrigemTable" Type="Edm.String" MaxLength="120" sap:unicode="false" sap:label="ORIGEM_TABLE"/>
+            <Property Name="CodLegalEntity" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="COD_LEGAL_ENTITY"/>
+            <Property Name="CodigoSistemaOrigem" Type="Edm.Decimal" Precision="5" Scale="0" sap:unicode="false" sap:label="CODIGO_SISTEMA_ORIGEM"/>
+            <Property Name="Sinal" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="SINAL"/>
+            <Property Name="CodigoModalidade" Type="Edm.Decimal" Precision="30" Scale="0" sap:unicode="false" sap:label="CODIGO_MODALIDADE"/>
+            <Property Name="CodigoPlanoPrevBeneficio" Type="Edm.Decimal" Precision="4" Scale="0" sap:unicode="false" sap:label="CODIGO_PLANO_PREV_BENEFICIO"/>
+            <Property Name="CodBeneficioPrevBeneficio" Type="Edm.Decimal" Precision="3" Scale="0" sap:unicode="false" sap:label="COD_BENEFICIO_PREV_BENEFICIO"/>
+            <Property Name="ContDataVigencia" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="CONT_DATA_VIGENCIA"/>
+            <Property Name="DataInicioVigenciaContrato" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="DATA_INICIO_VIGENCIA_CONTRATO"/>
+            <Property Name="BtId" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="BT_ID"/>
+        </EntityType>
+
+
+        <EntityContainer Name="ZPSGW_STAGE_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+            <EntitySet Name="OZPSTA_STG_BT_PRV" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_PRV" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_SOC" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_SOC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_SIS" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_SIS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_CPG" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_CPG" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_SGS" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_SGS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_TAB_STG" EntityType="ZPSGW_STAGE_SRV.ZPSTA_TAB_STG" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_PRE" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_PRE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_SIN" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_SIN" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_R_PRE" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_R_PRE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_R_SIN" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_R_SIN" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_R_PPR" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_R_PPR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntitySet Name="OZPSTA_STG_BT_R_PSI" EntityType="ZPSGW_STAGE_SRV.ZPSTA_STG_BT_R_PSI" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+        </EntityContainer>
+
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://li5762.portoseguro.brasil:8200/sap/opu/odata/sap/ZPSGW_STAGE_SRV/$metadata"/>
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://li5762.portoseguro.brasil:8200/sap/opu/odata/sap/ZPSGW_STAGE_SRV/$metadata"/>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,34 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+     <Dialog
+        title ="{i18n>searchBtn}"
+			resizable="true"
+			draggable="true"
+			id="sId-DialogInputStsInb">
+        <l:VerticalLayout id="_IDGenVerticalLayout1"
+            class="sapUiContentPadding"
+            width="100%">
+            <MultiComboBox
+            placeholder="{i18n>status}"
+			width="100%"
+			items="{
+				path: '/OZPSTA_STATUS_LIST',
+				sorter: {path: 'Status',  descending: false}
+			}"
+            id="DialogInputStsInb">
+			<core:Item id="_IDGenItem1" key="{Id}" text="{Status}"/>
+		</MultiComboBox>
+        </l:VerticalLayout>
+        <buttons>
+            <Button 
+            type="Default" text="{i18n>confirm}" id="bId-SDialogInb"
+            press=".onstsFilterInb" ariaLabelledBy="editButtonLabel"/>
+            <Button id="_IDGenButton1" 
+            type="Default" text="{i18n>reset}" 
+            press=".onResetsearch" ariaLabelledBy="editButtonLabel"/>
+        </buttons>
+       </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,170 @@
+<mvc:View controllerName="portoseguro.zpstastatusmon.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:grid="sap.ui.layout.cssgrid" xmlns:f="sap.f" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" height="100%" xmlns:cm="sap.suite.ui.commons"
+	xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar">
+    <Page id="page" title="{i18n>title}">
+        <content>
+			<!--EM DESENVOLVIMENTO<Panel id="panelForStatusProcess" expandable="true">
+				<headerToolbar>
+					<OverflowToolbar height="3rem" class="toolbarSpacer">
+						<Title text="{i18n>titleHeaderStatusProcess}"/>
+					</OverflowToolbar>
+				</headerToolbar>
+				<fb:FilterBar id="fbStatusProc" reset="onResetFbStatusProc" search="onSearchFbStatusProc" showRestoreButton="true" showClearButton="true">
+					<fb:filterGroupItems>
+						<fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Data de Processamento" mandatory="true"  partOfCurrentVariant="true" visibleInFilterBar="true">
+							<fb:control>
+								<DatePicker/>
+							</fb:control>
+						</fb:FilterGroupItem>
+						<fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Conector" labelTooltip="Código Conector" mandatory="false"
+							partOfCurrentVariant="true" visibleInFilterBar="true">
+							<fb:control>
+								<ComboBox type="Text">
+									<items>
+										<core:Item key="0" text="Todos"/>
+										<core:Item key="1" text="1 - Auto"/>
+										<core:Item key="2" text="2 - AZUL"/>
+										<core:Item key="3" text="3 - Fiança"/>
+										<core:Item key="4" text="4 - Porto Socorro"/>
+										<core:Item key="5" text="5 - Previdência"/>
+										<core:Item key="6" text="6 - Re"/>
+										<core:Item key="7" text="7 - Saúde"/>
+										<core:Item key="8" text="8 - Transportes"/>
+										<core:Item key="9" text="9 - Vida"/>
+										<core:Item key="10" text="10 - Pgto de Comissões"/>
+										<core:Item key="11" text="11 - Resseguro"/>
+									</items>
+								</ComboBox>
+							</fb:control>
+						</fb:FilterGroupItem>
+					</fb:filterGroupItems>
+				</fb:FilterBar>
+				<List id="lstProcFlow" headerText="" mode="None" items="{pflowModel>/results}" class="sapUiContentPadding" >
+						<CustomListItem>
+							<HBox direction="Column" >
+							<ObjectIdentifier title="{pflowModel>descricao_conector}" 
+								text="Inicio Processamento: {pflowModel>data_ini_execucao} >>>>> Fim Processamento: {pflowModel>data_fim_execucao}"
+							titleActive="false"/>
+								<cm:ProcessFlow scrollable="true" nodePress="onNodePress" nodes="{pflowModel>nodes}" lanes="{pflowModel>lanes}">
+									<cm:nodes>
+										<cm:ProcessFlowNode  laneId="{pflowModel>lane}" nodeId="{pflowModel>id}" title="{pflowModel>title}"
+											titleAbbreviation="{pflowModel>titleAbbreviation}" children="{pflowModel>children}" state="{pflowModel>state}"
+											stateText="{pflowModel>stateText}" texts="{pflowModel>texts}" focused="{pflowModel>focused}" type="{pflowModel>node_type}"/>
+									</cm:nodes>
+									<cm:lanes>
+										<cm:ProcessFlowLaneHeader laneId="{pflowModel>id}" iconSrc="{pflowModel>icon}" text="{pflowModel>label}" position="{pflowModel>position}"/>
+									</cm:lanes>
+								</cm:ProcessFlow>
+							</HBox>
+						</CustomListItem>
+				</List>
+			
+			</Panel>-->
+			<!--**************************************************************-->
+			<!--                        Tabelas Inbound                       -->
+			<!--**************************************************************-->
+			<Panel id="panelForGridListInb">
+				<headerToolbar>
+					<OverflowToolbar id="_IDGenOverflowToolbar1" height="3rem" class="toolbarSpacer">
+						<Title id="_IDGenTitle1" text="{i18n>titleHeaderInb}"/>
+						<Button id="searchBtnInb" class="sapUiTinyMarginBeginEnd" icon="sap-icon://search" type="Transparent" text="{i18n>searchBtn}"
+							iconFirst="false" press=".onSearchStsInb"></Button>
+					</OverflowToolbar>
+				</headerToolbar>
+				<f:GridList id="gridListInb" items="{/OZPSTA_STS_INB}">
+					<f:customLayout>
+						<grid:GridResponsiveLayout id="_IDGenGridResponsiveLayout1" layoutChange="onLayoutChange">
+							<grid:layoutS>
+								<grid:GridSettings id="_IDGenGridSettings1" gridTemplateColumns="repeat(auto-fit, 13rem)" gridGap="0.75rem 2.2rem"/>
+							</grid:layoutS>
+							<grid:layoutM>
+								<grid:GridSettings id="_IDGenGridSettings2" gridTemplateColumns="repeat(auto-fit, 11rem)" gridGap="0.5rem 2.2rem"/>
+							</grid:layoutM>
+							<grid:layoutL>
+								<grid:GridSettings id="_IDGenGridSettings3" gridTemplateColumns="repeat(auto-fit, 12rem 12rem)" gridGap="0.7rem 1rem"/>
+							</grid:layoutL>
+							<grid:layoutXL>
+								<grid:GridSettings id="_IDGenGridSettings4" gridTemplateColumns="repeat(auto-fit, 12rem 12rem)" gridGap="1rem 1rem"/>
+							</grid:layoutXL>
+						</grid:GridResponsiveLayout>
+					</f:customLayout>
+					<f:GridListItem type="Active" class="tileSize" press=".onNavDetail" tooltip="{Status}" id="DetailPageInb">
+						<Title id="_IDGenTitle2" text="{Status}"/>
+						<NumericContent id="_IDGenNumericContent1" value="{ path: 'TotalRegistros', formatter: '.formatter.numberFormat' }" truncateValueTo="11" withMargin="false"
+							valueColor="{ path: 'Status', formatter: '.formatter.colorChange' }"/>
+						<Text id="_IDGenText1" text="{i18n>registros}"/>
+					</f:GridListItem>
+				</f:GridList>
+			</Panel>
+			<!--**************************************************************-->
+			<!--                        Tabelas Stage                         -->
+			<!--**************************************************************-->
+			<Panel id="panelForGridListStg">
+				<headerToolbar>
+					<OverflowToolbar id="_IDGenOverflowToolbar2" height="3rem" class="toolbarSpacer">
+						<Title id="_IDGenTitle3" text="{i18n>titleHeaderStg}"/>
+						<Button id="searchBtnStg" class="sapUiTinyMarginBeginEnd" icon="sap-icon://search" type="Transparent" text="{i18n>searchBtn}"
+							iconFirst="false" press=".onSearchStsStg"></Button>
+					</OverflowToolbar>
+				</headerToolbar>
+				<f:GridList id="gridListStg" items="{/OZPSTA_STS_STG}">
+					<f:customLayout>
+						<grid:GridResponsiveLayout id="_IDGenGridResponsiveLayout2" layoutChange="onLayoutChange">
+							<grid:layoutS>
+								<grid:GridSettings id="_IDGenGridSettings5" gridTemplateColumns="repeat(auto-fit, 13rem)" gridGap="0.75rem 2.2rem"/>
+							</grid:layoutS>
+							<grid:layoutM>
+								<grid:GridSettings id="_IDGenGridSettings6" gridTemplateColumns="repeat(auto-fit, 11rem)" gridGap="0.5rem 2.2rem"/>
+							</grid:layoutM>
+							<grid:layoutL>
+								<grid:GridSettings id="_IDGenGridSettings7" gridTemplateColumns="repeat(auto-fit, 12rem 12rem)" gridGap="0.7rem 1rem"/>
+							</grid:layoutL>
+							<grid:layoutXL>
+								<grid:GridSettings id="_IDGenGridSettings8" gridTemplateColumns="repeat(auto-fit, 12rem 12rem)" gridGap="1rem 1rem"/>
+							</grid:layoutXL>
+						</grid:GridResponsiveLayout>
+					</f:customLayout>
+					<f:GridListItem type="Active" class="tileSize" press=".onNavDetail" tooltip="{Status}" id="DetailPageStg">
+						<Title id="_IDGenTitle4" text="{Status}"/>
+						<NumericContent id="_IDGenNumericContent2" value="{ path: 'TotalRegistros', formatter: '.formatter.numberFormat' }" truncateValueTo="11" withMargin="false"
+							valueColor="{ path: 'Status', formatter: '.formatter.colorChange'}"/>
+						<Text id="_IDGenText2" text="{i18n>registros}"/>
+					</f:GridListItem>
+				</f:GridList>
+			</Panel>
+			<!--**************************************************************-->
+			<!--                        Tabelas Histórico                     -->
+			<!--**************************************************************-->
+			<Panel id="panelForGridListHist">
+				<headerToolbar>
+					<OverflowToolbar id="_IDGenOverflowToolbar3" height="3rem" class="toolbarSpacer">
+						<Title id="_IDGenTitle5" text="Tabelas Histórico"/>
+						<Button text="Mais detalhes" icon="sap-icon://form" press="onNavDetail" id="DetailPageHist"/>
+					</OverflowToolbar>
+				</headerToolbar>
+				<layout:FixFlex id='chartFixFlex' minFlexSize="350">
+					<layout:flexContent>
+						<!-- <viz:Popover id="idPopOver"></viz:Popover> -->
+						<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='bar'>
+							<viz:dataset>
+								<viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/OZPSTA_HIST_TOT}">
+									<viz.data:dimensions>
+										<viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name=" " value="{Tabela}"/>
+									</viz.data:dimensions>
+									<viz.data:measures>
+										<viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Qtd_Registros" value="{TotalRegistros}"/>
+									</viz.data:measures>
+								</viz.data:FlattenedDataset>
+							</viz:dataset>
+							<viz:feeds>
+								<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Qtd_Registros"/>
+								<viz.feeds:FeedItem id="_IDGenFeedItem1" uid="categoryAxis" type="Dimension" values=" "/>
+							</viz:feeds>
+						</viz:VizFrame>
+					</layout:flexContent>
+				</layout:FixFlex>
+			</Panel>
+		</content>
+    </Page>
+</mvc:View>

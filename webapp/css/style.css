@@ -1,0 +1,10 @@
+/* Custom Toolbar	*/
+.toolbarSpacer {
+    display: flex;
+    justify-content: space-between;
+}
+/* GridListItem size customization	*/
+.tileSize{
+	padding: 1rem;
+    cursor: pointer;
+}

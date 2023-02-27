@@ -1,0 +1,264 @@
+<mvc:View
+	controllerName="portoseguro.zpstastatusmon.controller.DetailPageHist"
+    height="100%"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:semantic="sap.m.semantic"
+    xmlns:ui="sap.ca.ui"
+    displayBlock="true"
+    xmlns:smartTable="sap.ui.comp.smarttable" 
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+     xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:l="sap.ui.layout">
+
+    <semantic:FullscreenPage id="_IDGenFullscreenPage1"
+        title="Detalhes"
+        showNavButton="true"
+        navButtonPress="onNavBack">
+        
+        <IconTabBar
+		id="idIconTabBarHist"
+		class="sapUiResponsiveContentPadding"
+		stretchContentHeight="true">
+		<items>
+			<IconTabFilter id="_IDGenIconTabFilter1"
+				icon="sap-icon://accidental-leave"
+				iconColor="Positive"
+				count="{ModelIconTabFilterHist>/nTotal_SOCEXH}"
+				text="SOCEXH"
+				key="Ok">
+				<smartFilterBar:SmartFilterBar visible="false" id="smartFilterBarDummy" entitySet="/" persistencyKey="SmartFilter_Exploreddummy">
+					<smartFilterBar:controlConfiguration>
+					</smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				
+				<smartFilterBar:SmartFilterBar id="smartFilterBarSocext" entitySet="OZPSTA_INB_SOCEXH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_SOCEXH" smartFilterId="smartFilterBarSocext" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Socorro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSOCEXH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout1" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData1" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter2"
+				icon="sap-icon://collision"
+				iconColor="Critical"
+				count="{ModelIconTabFilterHist>/nTotal_SINEXH}"
+				text="SINEXH"
+				key="Critical">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarSinext" entitySet="OZPSTA_INB_SINEXH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_SINEXH" smartFilterId="smartFilterBarSinext" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Sinistro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSINEXH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout2" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData2" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter3"
+				icon="sap-icon://customer-order-entry"
+				iconColor="Negative"
+				count="{ModelIconTabFilterHist>/nTotal_SEGEXH}"
+				text="SEGEXH"
+				key="">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarSegext" entitySet="OZPSTA_INB_SEGEXH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_SEGEXH" smartFilterId="smartFilterBarSegext" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Seguro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSEGEXH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout3" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData3" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter4"
+				icon="sap-icon://wounds-doc"
+				iconColor="Positive"
+				count="{ModelIconTabFilterHist>/nTotal_SINSEH}"
+				text="SINSEH"
+				key="Ok">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarSinsex" entitySet="OZPSTA_INB_SINSEH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_SINSEH" smartFilterId="smartFilterBarSinsex" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Sinistro Saúde Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSINSEH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout4" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData4" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter5"
+				icon="sap-icon://meeting-room"
+				iconColor="Critical"
+				count="{ModelIconTabFilterHist>/nTotal_PRVEXH}"
+				text="PRVEXH"
+				key="Heavy">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarPrvext" entitySet="OZPSTA_INB_PRVEXH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_PRVEXH" smartFilterId="smartFilterBarPrvext" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Previdência Ext.  Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblPRVEXH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout5" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData5" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+				
+			<IconTabFilter id="_IDGenIconTabFilter6"
+				icon="sap-icon://commission-check"
+				iconColor="Negative"
+				count="{ModelIconTabFilterHist>/nTotal_COMPGH}"
+				text="COMPGH"
+				key="Overweight">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarCompgt" entitySet="OZPSTA_INB_COMPGH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_COMPGH" smartFilterId="smartFilterBarCompgt" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Pagto. Comissões Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblCOMPGH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout6" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData6" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<!--Resseguro-->
+			<IconTabFilter id="_IDGenIconTabFilter7"
+				icon="sap-icon://insurance-car"
+				iconColor="Positive"
+				count="{ModelIconTabFilterHist>/nTotal_R_EXH}"
+				text="R_EXH"
+				key="Overweight">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarRext" entitySet="OZPSTA_INB_R_EXH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_R_EXH" smartFilterId="smartFilterBarRext" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Resseguro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_EXH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout7" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData7" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter8"
+				icon="sap-icon://insurance-car"
+				iconColor="Critical"
+				count="{ModelIconTabFilterHist>/nTotal_R_SINEXH}"
+				text="R_SINEXH"
+				key="Overweight">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarRsinext" entitySet="OZPSTA_INB_R_SINEXH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_R_SINEXH" smartFilterId="smartFilterBarRsinext" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Resseguro Sinistro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_SINEXH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout8" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData8" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter9"
+				icon="sap-icon://insurance-life"
+				iconColor="Negative"
+				count="{ModelIconTabFilterHist>/nTotal_R_PRVPRH}"
+				text="R_PRVPRH"
+				key="Overweight">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarRprvPre" entitySet="OZPSTA_INB_R_PRVPRH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_R_PRVPRH" smartFilterId="smartFilterBarRprvPre" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Resseguro Prev. Prêmio Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_PRVPRH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout9" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData9" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+			
+			<IconTabFilter id="_IDGenIconTabFilter10"
+				icon="sap-icon://insurance-life"
+				iconColor="Positive"
+				count="{ModelIconTabFilterHist>/nTotal_R_PRVSIH}"
+				text="R_PRVSIH"
+				key="Overweight">
+				<smartFilterBar:SmartFilterBar id="smartFilterBarRPrvSin" entitySet="OZPSTA_INB_R_PRVSIH" persistencyKey="SmartFilter_Explored">
+					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+				</smartFilterBar:SmartFilterBar>
+				<smartTable:SmartTable entitySet="OZPSTA_INB_R_PRVSIH" smartFilterId="smartFilterBarRPrvSin" editTogglable="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					useTablePersonalisation="true" header="Resseguro Prev. Sinistro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
+					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_PRVSIH" showFullScreenButton="true" 
+					ignoredFields="status"
+					beforeRebindTable="onBeforeRebindTable"
+					customData:p13nDialogSettings='{filter:{visible:false}}'>
+					<l:VerticalLayout id="_IDGenVerticalLayout10" class="sapUiContentPad" width="1rem"/>
+					<smartTable:layoutData>
+						<FlexItemData id="_IDGenFlexItemData10" growFactor="1" baseSize="0%"/>
+					</smartTable:layoutData>
+				</smartTable:SmartTable>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+    </semantic:FullscreenPage>
+
+</mvc:View>

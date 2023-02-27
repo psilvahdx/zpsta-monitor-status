@@ -1,0 +1,1601 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZPSGW_INBOUND_SRV/$metadata_Inbound">
+		<edmx:Include Alias="Metadata" Namespace="ZPSGW_INBOUND_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="portoseguro.zpsta_statusmon.annotation.ZPSGW_INBOUND_SRV">
+            <Annotations Target="Metadata.ZPSTA_INB_SOCEXT">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoSucursal</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>NumeroServico</PropertyPath>
+						<PropertyPath>AnoServico</PropertyPath>
+						<PropertyPath>CodigoAtena</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="5rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="5rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursal"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroServico"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="AnoServico"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamoContabil"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DataCompetencia"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path=" CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroVersaoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoAtena">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoSucursal">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoEventoNegocio">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/NumeroServico">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SERVIÇO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/AnoServico">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SERVIÇO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoRamoContabil">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO_CONTABIL}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoModalidade">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._MODALIDADE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/DataCompetencia">
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_COMPETENCIA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/ CodigoTipoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/NumeroVersaoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoSistemaOrigem">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SISTEMA_ORIGEM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoAtena">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CorrelationId">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CORRELATION_ID}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/DataInclusaoRegistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_INCLUSÃO_REGISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/Client">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/Comments">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COMMENTS}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_CONECTOR}"/>
+			</Annotations>
+
+
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT">
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="CodigoConector"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSinistroServico"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="AnoSinistroServico"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroItemApolice"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroOrdemSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoMovimentoSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSequenciaMovimentoSin"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroVersaoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursalSinistroExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroApoliceSinistroExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoConector</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>CodigoSucursalSinistroExt</PropertyPath>
+						<PropertyPath>NumeroApoliceSinistroExt</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoEmpresa">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoRamo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoModalidade">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._MODALIDADE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/NumeroSinistroServico">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_SINISTRO_SERVIÇO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/AnoSinistroServico">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SINISTRO_SERVIÇO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/NumeroItemApolice">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_ITEM_APOLICE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/NumeroOrdemSinistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_ORDEM_SINISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoEventoNegocio">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_EVENTO_NEGOCIO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoMovimentoSinistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_MOVIMENTO_SINISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/NumeroSequenciaMovimentoSin">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_SEQUENCIA_MOVIMENTO_SINISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoTipoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_TIPO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoAtena">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_ATENA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/DataInclusaoRegistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_DE_INCLUSÃO_DE_REGIDTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/Client">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			</Annotations>
+
+
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT">
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoConector</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>CodigoRamo</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursal"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroApolice"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroEndosso"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoOrigemProposta"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroProposta"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSequenciaDocumento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DataEmissaoDocumento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroVersaoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="numero_sequencia_pagamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="codigo_movimento_susep"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="numero_endosso_referencia"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoEmpresa">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoSucursal">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoRamo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoModalidade">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._MODALIDADE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/NumeroApolice">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._APOLICE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/NumeroEndosso">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._ENDOSSO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoOrigemProposta">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ORIGEM_PROPOSTA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/NumeroProposta">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._PROPOSTA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/NumeroSequenciaDocumento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEQUENCIA_DOCUMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/DataEmissaoDocumento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSÃO_DE_DOCUMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoTipoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/NumeroVersaoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoEventoNegocio">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CorrelationId">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CORRELATION_ID}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoAtena">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/Client">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/Comments">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COMMENTS}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
+			</Annotations>
+
+
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoConector</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>NumeroSinistro</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="AnoSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSequenciaMovimento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRegimePagamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroVersaoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoEmpresa">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoEventoNegocio">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/NumeroSinistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SINISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/AnoSinistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SINISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoRamo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoModalidade">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._MOBILIDADE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/NumeroSequenciaMovimento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEQUENCIA_DOCUMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoRegimePagamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._REGIME_PAGAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoTipoSinistro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_SINISTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoTipoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/NumeroVersaoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/Client">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CorrelationId">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CORRELATION_ID}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/Comments">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COMMENTS}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
+			</Annotations>
+
+			
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT">
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoOperacao</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>NumeroMovimentoPrevExt</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoOperacao"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoIdDocEventoPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroMovimentoPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroDetalheMovPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoReservaPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoReservaPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumVersaoLancamentoPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodRotContEvNegParam"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoOperacao">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._OPERAÇÃO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoEventoNegocio">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoIdDocEventoPrevExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD_ID_DOC_EVENTO_PREV_EXT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/NumeroMovimentoPrevExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._MOVIMENTO_PREVIDÊNCIA_EXTRATO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/NumeroDetalheMovPrevExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM_DETALHE_MOV_PREV_EXT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoReservaPrevidenciaExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RESERVA_PREVIDENCIA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoReservaPrevidenciaExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._FUNDO_RESERVA_PREVIDENCIA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoTipoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/NumVersaoLancamentoPrevExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodRotContEvNegParam">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD_ROT_CONT_EV_NEG_PARAM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/Client">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoParticipantePrevExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._PARTICIPANTE_PREVIDÊNCIA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CorrelationId">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CORRELATION_ID}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/Comments">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COMMENTS}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
+			</Annotations>
+
+
+
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoConector</PropertyPath>
+						<PropertyPath>CodigoRamo</PropertyPath>
+						<PropertyPath>NumeroApolice</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursal"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroApolice"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroEndosso"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoOrigemProposta"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroProposta"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSeguroParcela"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTransacaoComissao"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="AnoOrdemPagamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroOrdemPagamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSusepSeguroCorretor"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DataPagamentoComissao"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoPagamentoComissao"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.DataPoint">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoEmpresa">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoSucursal">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoRamo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoModalidade">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._MODALIDADE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/NumeroApolice">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._APOLICE}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/NumeroEndosso">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._ENDOSSO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoOrigemProposta">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ORIGEM_PROPOSTA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/NumeroProposta">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._PROPOSTA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/NumeroSeguroParcela">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEGURO_PARCELA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoTransacaoComissao">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TRANSAÇÃO_COMISSÃO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/AnoOrdemPagamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_ORDEM_PAGAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/NumeroOrdemPagamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._ORDEM_PAGAMENTO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/Client">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoAtena">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
+			</Annotations>
+
+
+        <!--*************************** Resseguro **************************-->
+			<Annotations Target="Metadata.ZPSTA_INB_R_EXT">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>NumeroApolice</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursal"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroApolice"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroEndosso"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoOrigemProposta"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroProposta"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoContratoResseguro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSequenciaDocumento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DataEmissaoDocumento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroVersaoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSequenciaPagamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoMovimentoSusep"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroEndossoReferencia"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			
+
+			<Annotations Target="Metadata.ZPSTA_INB_R_SINEXT">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>NumeroApolice</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursal"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoModalidade"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroOrdemSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="AnoSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroItemApolice"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroApolice"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroSequenciaMovSinistro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoContratoResseguro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroVersaoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoMovimentoSusep"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+
+
+			<Annotations Target="Metadata.ZPSTA_INB_R_PRVPRE">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoEmpresaPrevidenciaExt</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>NumApolicePrevidenciaExt</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEmpresaPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodSucursalPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoRamoPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodModalidadePrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumApolicePrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodCertificadoPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoPlanoPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodBeneficioPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoPlanoSusepPlncodigo"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoContratoResseguro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumVersaoLancPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DataMovimentoResseguro"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+
+
+			<Annotations Target="Metadata.R_PRVSINType">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>CodigoEmpresaPrevidenciaExt</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>
+						<PropertyPath>CodigoAtena</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoOperacao"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodIdentDocEventoPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroMovimentoPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumeroDetalheMovPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoReservaPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoReservaPrevidenciaExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoTipoLancamento"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NumVersaoLancPrevExt"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodRotContEventoNegParam"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
