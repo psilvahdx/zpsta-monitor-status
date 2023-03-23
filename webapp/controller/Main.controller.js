@@ -57,25 +57,31 @@ sap.ui.define([
 					}
 				});
 
-				// this.oPopOver = this.getView().byId("idPopOver");
-				// this.oPopOver.connect(oVizFrame.getVizUid());
-				// this.oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+				this.oPopOver = this.getView().byId("idPopOver");
+				this.oPopOver.connect(oVizFrame.getVizUid());
+				this.oPopOver.setFormatString(formatPattern.STANDARDFLOAT);
+
+				const fnRefresh =  setInterval(function () {
+				 		//refresh automatico somente na view inicial
+						try {
+							if(that.getRouter().getHashChanger().hash === ''){
+				 			let oHistModel = that.getModel("HistServ");
+				 			let	oDefaultModel = that.getModel();
+							
+							if(oHistModel && oDefaultModel){
+								oHistModel.refresh();
+								oDefaultModel.refresh();	
+							}				 			
+				 			
+				 		}		
+						} catch (error) {
+							clearInterval(fnRefresh);
+						}
+				 					
+						
+				 }, 10000);
 				
-				// setInterval(function () {
-				// 		//refresh automatico somente na view inicial
-				// 		if(that.getRouter().getHashChanger().hash === ''){
-				// 			var oHistModel = that.getView().getModel("HistService");
-				// 			var	oDefaultModel = that.getView().getModel();
-						
-				// 			oHistModel.refresh();
-				// 			oDefaultModel.refresh();	
-				// 		}
-						
-						
-				// }, 10000);
 				
-				//EM DESENVOLVIMENTO
-				//this.initProcessFlowModel();
             },
 
             // Abrir a caixa de pesquisa(Dialog)
@@ -228,10 +234,9 @@ sap.ui.define([
 			onNavDetail: function (oEvent) {
 				var evtContext = oEvent.getSource().getBindingContext();
 				var evtId;
-				// var evtId = 'Target' + oEvent.mParameters.id.substr(64,13);
-
+				evtId = 'Target' + oEvent.getSource().data("customId");
 				if (evtContext !== undefined) {
-					evtId = 'Target' + oEvent.mParameters.id.substr(64,13);
+					
 					var selectedStatus = evtContext.getProperty("Status");
 					var appendStatus = {
 						status: selectedStatus
@@ -239,7 +244,7 @@ sap.ui.define([
 
 					this.getRouter().navTo(evtId, appendStatus);
 				} else {
-					evtId = 'Target' + oEvent.mParameters.id.substr(64);
+					
 					this.getRouter().navTo(evtId, {});
 				}
 			},

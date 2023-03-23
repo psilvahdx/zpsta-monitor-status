@@ -30,7 +30,7 @@
 				"type": "OData",
 				"settings": {
                     "type": "ODataAnnotation",
-					"localUri": "/webapp/localService/metadata_Inbound.xml",
+					"localUri": "localService/metadata_Inbound.xml",
 					"annotations": ["annotationInb"]
 				}
 			},
@@ -39,7 +39,7 @@
 				"type": "OData",
 				"settings": {
                     "type": "ODataAnnotation",
-					"localUri": "/webapp/localService/metadata_Stage.xml",
+					"localUri": "localService/metadata_Stage.xml",
 					"annotations": ["annotationStg"]
 				}
 			},
@@ -47,13 +47,13 @@
 				"uri": "/sap/opu/odata/sap/ZPSGW_HISTORICO_SRV/",
 				"type": "OData",
 				"settings": {
-					"localUri": "/webapp/localService/metadata_Historico.xml",
+					"localUri": "localService/metadata_Historico.xml",
 					"annotations": ["annotationHist"]
 				}
             },
             "annotationInb": {
                 "type": "ODataAnnotation",
-                "uri": "annotations/annotationStg.xml",
+                "uri": "annotations/annotationInb.xml",
                 "settings": {
                     "localUri": "annotations/annotationInb.xml"
                 }
@@ -65,11 +65,11 @@
                     "localUri": "annotations/annotationStg.xml"
                 }
             },
-            "annotation2": {
+            "annotationHist": {
                 "type": "ODataAnnotation",
-                "uri": "annotations/annotationHist.xml",
+                "uri": "annotations/annotationsHist.xml",
                 "settings": {
-                    "localUri": "annotations/annotationHist.xml"
+                    "localUri": "annotations/annotatiosHist.xml"
                 }
             }
         },

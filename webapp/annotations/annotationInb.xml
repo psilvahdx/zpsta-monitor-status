@@ -1,29 +1,35 @@
+
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-	<edmx:Reference Uri="/sap/opu/odata/sap/ZPSGW_INBOUND_SRV/$metadata_Inbound">
+ 	<edmx:Reference Uri="/sap/opu/odata/sap/ZPSGW_INBOUND_SRV/$metadata">
 		<edmx:Include Alias="Metadata" Namespace="ZPSGW_INBOUND_SRV"/>
 	</edmx:Reference>
-	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+   <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
 		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
 		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
 	</edmx:Reference>
+	<edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
+        <edmx:Include Alias="HTML5" Namespace="com.sap.vocabularies.HTML5.v1" />
+    </edmx:Reference>
 	<edmx:DataServices>
-		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="portoseguro.zpsta_statusmon.annotation.ZPSGW_INBOUND_SRV">
-            <Annotations Target="Metadata.ZPSTA_INB_SOCEXT">
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="portoseguro.zpstatusmon.ZPSGW_INBOUND_SRV">
+            <Annotations Target="Metadata.ZPSTA_INB_SOCEXT">			
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
 						<PropertyPath>CodigoEmpresa</PropertyPath>
 						<PropertyPath>CodigoSucursal</PropertyPath>
 						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>NumeroServico</PropertyPath>
 						<PropertyPath>AnoServico</PropertyPath>
-						<PropertyPath>CodigoAtena</PropertyPath>
+						
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
-						<Record Type="UI.DataField">
+
+					<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoAtena"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
 								<Record>
@@ -31,6 +37,8 @@
 								</Record>
 							</Annotation>
 						</Record>
+						
+
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
@@ -39,14 +47,7 @@
 								</Record>
 							</Annotation>
 						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="CodigoSucursal"/>
-							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
-								<Record>
-									<PropertyValue Property="width" String="10rem"/>
-								</Record>
-							</Annotation>
-						</Record>
+
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
@@ -55,6 +56,17 @@
 								</Record>
 							</Annotation>
 						</Record>
+
+						
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoSucursal"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="NumeroServico"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
@@ -119,7 +131,13 @@
 					</Record>
 				</Annotation>
 			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_CONECTOR}"/>
+			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoAtena">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoEmpresa">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoSucursal">
@@ -129,10 +147,10 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/NumeroServico">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SERVIÇO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SERVICO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/AnoServico">
-				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SERVIÇO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SERVICO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoRamoContabil">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO_CONTABIL}"/>
@@ -143,34 +161,24 @@
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/DataCompetencia">
 				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_COMPETENCIA}"/>
 			</Annotations>
-			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/ CodigoTipoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoTipoLancamento">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/NumeroVersaoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSAO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoSistemaOrigem">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SISTEMA_ORIGEM}"/>
-			</Annotations>
-			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoAtena">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
-			</Annotations>
+			</Annotations>			
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CorrelationId">
 				<Annotation Term="Common.Label" String="{@i18n&gt;CORRELATION_ID}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/DataInclusaoRegistro">
-				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_INCLUSÃO_REGISTRO}"/>
-			</Annotations>
-			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/Client">
-				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
-			</Annotations>
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_INCLUSAO_REGISTRO}"/>
+			</Annotations>			
 			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/Comments">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COMMENTS}"/>
 			</Annotations>
-			<Annotations Target="Metadata.ZPSTA_INB_SOCEXT/CodigoConector">
-				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_CONECTOR}"/>
-			</Annotations>
-
 
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT">
 				<Annotation Term="UI.DataPoint">
@@ -313,6 +321,7 @@
 					</Collection>
 				</Annotation>
 			</Annotations>
+			
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoEmpresa">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
 			</Annotations>
@@ -323,10 +332,10 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._MODALIDADE}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/NumeroSinistroServico">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_SINISTRO_SERVIÇO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_SINISTRO_SERVICO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/AnoSinistroServico">
-				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SINISTRO_SERVIÇO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SINISTRO_SERVICO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/NumeroItemApolice">
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_ITEM_APOLICE}"/>
@@ -344,13 +353,13 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUMERO_SEQUENCIA_MOVIMENTO_SINISTRO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoTipoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_TIPO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_TIPO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoAtena">
 				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_ATENA}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/DataInclusaoRegistro">
-				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_DE_INCLUSÃO_DE_REGIDTRO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_DE_INCLUSAO_DE_REGIDTRO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/Client">
 				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
@@ -383,7 +392,23 @@
 							</Annotation>
 						</Record>
 						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoConector"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
 								<Record>
 									<PropertyValue Property="width" String="10rem"/>
@@ -478,8 +503,9 @@
 								</Record>
 							</Annotation>
 						</Record>
+						
 						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="CodigoEventoNegocio"/>
+							<PropertyValue Property="Value" Path="NumeroSequenciaPagamento"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
 								<Record>
 									<PropertyValue Property="width" String="10rem"/>
@@ -487,7 +513,7 @@
 							</Annotation>
 						</Record>
 						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="numero_sequencia_pagamento"/>
+							<PropertyValue Property="Value" Path="CodigoMovimentoSusep"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
 								<Record>
 									<PropertyValue Property="width" String="10rem"/>
@@ -495,15 +521,7 @@
 							</Annotation>
 						</Record>
 						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="codigo_movimento_susep"/>
-							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
-								<Record>
-									<PropertyValue Property="width" String="10rem"/>
-								</Record>
-							</Annotation>
-						</Record>
-						<Record Type="UI.DataField">
-							<PropertyValue Property="Value" Path="numero_endosso_referencia"/>
+							<PropertyValue Property="Value" Path="NumeroEndosso"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
 								<Record>
 									<PropertyValue Property="width" String="10rem"/>
@@ -541,13 +559,13 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEQUENCIA_DOCUMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/DataEmissaoDocumento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSÃO_DE_DOCUMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSAO_DE_DOCUMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoTipoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/NumeroVersaoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSAO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoEventoNegocio">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
@@ -567,6 +585,7 @@
 			<Annotations Target="Metadata.ZPSTA_INB_SEGEXT/CodigoConector">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
 			</Annotations>
+		
 
 
 			<Annotations Target="Metadata.ZPSTA_INB_SINSEX">
@@ -685,6 +704,8 @@
 					</Record>
 				</Annotation>
 			</Annotations>
+
+		
 			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoEmpresa">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
 			</Annotations>
@@ -713,10 +734,10 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_SINISTRO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoTipoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/NumeroVersaoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSAO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/Client">
 				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
@@ -730,7 +751,7 @@
 			<Annotations Target="Metadata.ZPSTA_INB_SINSEX/CodigoConector">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
 			</Annotations>
-
+		
 			
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT">
 				<Annotation Term="UI.DataPoint">
@@ -740,6 +761,7 @@
 				</Annotation>
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
 						<PropertyPath>CodigoOperacao</PropertyPath>
 						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>NumeroMovimentoPrevExt</PropertyPath>
@@ -838,8 +860,9 @@
 					</Collection>
 				</Annotation>
 			</Annotations>
+					
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoOperacao">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._OPERAÇÃO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._OPERACAO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoEventoNegocio">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
@@ -848,7 +871,7 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD_ID_DOC_EVENTO_PREV_EXT}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/NumeroMovimentoPrevExt">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._MOVIMENTO_PREVIDÊNCIA_EXTRATO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._MOVIMENTO_PREVIDENCIA_EXTRATO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/NumeroDetalheMovPrevExt">
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUM_DETALHE_MOV_PREV_EXT}"/>
@@ -856,14 +879,14 @@
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoReservaPrevidenciaExt">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._RESERVA_PREVIDENCIA}"/>
 			</Annotations>
-			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoReservaPrevidenciaExt">
+			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoFundoReservaPrevExt">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._FUNDO_RESERVA_PREVIDENCIA}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoTipoLancamento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/NumVersaoLancamentoPrevExt">
-				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSAO_LANCAMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodRotContEvNegParam">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD_ROT_CONT_EV_NEG_PARAM}"/>
@@ -872,7 +895,7 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoParticipantePrevExt">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._PARTICIPANTE_PREVIDÊNCIA}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._PARTICIPANTE_PREVIDENCIA}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CorrelationId">
 				<Annotation Term="Common.Label" String="{@i18n&gt;CORRELATION_ID}"/>
@@ -883,12 +906,13 @@
 			<Annotations Target="Metadata.ZPSTA_INB_PRVEXT/CodigoConector">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
 			</Annotations>
-
+		
 
 
 			<Annotations Target="Metadata.ZPSTA_INB_COMPGT">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
 						<PropertyPath>CodigoEmpresa</PropertyPath>
 						<PropertyPath>CodigoConector</PropertyPath>
 						<PropertyPath>CodigoRamo</PropertyPath>
@@ -1033,6 +1057,8 @@
 					</Record>
 				</Annotation>
 			</Annotations>
+
+		
 			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoEmpresa">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
 			</Annotations>
@@ -1061,7 +1087,7 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEGURO_PARCELA}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoTransacaoComissao">
-				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TRANSAÇÃO_COMISSÃO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._TRANSACAO_COMISSAO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/AnoOrdemPagamento">
 				<Annotation Term="Common.Label" String="{@i18n&gt;ANO_ORDEM_PAGAMENTO}"/>
@@ -1078,15 +1104,15 @@
 			<Annotations Target="Metadata.ZPSTA_INB_COMPGT/CodigoConector">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._CONECTOR}"/>
 			</Annotations>
+		
 
-
-        <!--*************************** Resseguro **************************-->
+			<!--*************************** Resseguro **************************-->
 			<Annotations Target="Metadata.ZPSTA_INB_R_EXT">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEmpresa</PropertyPath>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>NumeroApolice</PropertyPath>
 					</Collection>
 				</Annotation>
@@ -1242,14 +1268,22 @@
 			<Annotations Target="Metadata.ZPSTA_INB_R_SINEXT">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEmpresa</PropertyPath>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>NumeroApolice</PropertyPath>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoEmpresa"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
@@ -1378,14 +1412,22 @@
 			<Annotations Target="Metadata.ZPSTA_INB_R_PRVPRE">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEmpresaPrevidenciaExt</PropertyPath>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEmpresaPrevidenciaExt</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>NumApolicePrevidenciaExt</PropertyPath>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
+					<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoEmpresaPrevidenciaExt"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
@@ -1503,16 +1545,24 @@
 			</Annotations>
 
 
-			<Annotations Target="Metadata.R_PRVSINType">
+			<Annotations Target="Metadata.ZPSTA_INB_R_PRVSIN">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEmpresaPrevidenciaExt</PropertyPath>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEmpresaPrevidenciaExt</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.LineItem">
 					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CodigoAtena"/>
+							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
+								<Record>
+									<PropertyValue Property="width" String="10rem"/>
+								</Record>
+							</Annotation>
+						</Record>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="CodigoOperacao"/>
 							<Annotation Term="com.sap.vocabularies.HTML5.v1.CssDefaults">
@@ -1595,7 +1645,7 @@
 						</Record>
 					</Collection>
 				</Annotation>
-			</Annotations>
+			</Annotations>        
 		</Schema>
 	</edmx:DataServices>
 </edmx:Edmx>

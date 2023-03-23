@@ -90,7 +90,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Socorro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSOCEXT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout1" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData1" growFactor="1" baseSize="0%"/>
@@ -111,7 +111,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Sinistro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSINEXT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout2" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData2" growFactor="1" baseSize="0%"/>
@@ -132,7 +132,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Seguro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSEGEXT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout3" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData3" growFactor="1" baseSize="0%"/>
@@ -153,7 +153,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Sinistro Saúde Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSINSEX" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout4" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData4" growFactor="1" baseSize="0%"/>
@@ -174,7 +174,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Previdência Ext.  Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblPRVEXT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout5" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData5" growFactor="1" baseSize="0%"/>
@@ -195,7 +195,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Pagto. Comissões Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblCOMPGT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout6" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData6" growFactor="1" baseSize="0%"/>
@@ -217,7 +217,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Resseguro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_EXT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout7" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData7" growFactor="1" baseSize="0%"/>
@@ -238,7 +238,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Resseguro Sinistro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_SINEXT" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout8" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData8" growFactor="1" baseSize="0%"/>
@@ -259,7 +259,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Resseguro Prev. Prêmio Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_PRVPRE" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout9" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData9" growFactor="1" baseSize="0%"/>
@@ -280,7 +280,7 @@
 					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
 					useTablePersonalisation="true" header="Resseguro Prev. Sinistro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_PRVSIN" showFullScreenButton="true"
-					ignoredFields="Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
+					ignoredFields="Client,Status" beforeRebindTable="onBeforeRebindTable" customData:p13nDialogSettings='{filter:{visible:false}}'>
 						<l:VerticalLayout id="_IDGenVerticalLayout10" class="sapUiContentPad" width="1rem"/>
 						<smartTable:layoutData>
 							<FlexItemData id="_IDGenFlexItemData10" growFactor="1" baseSize="0%"/>

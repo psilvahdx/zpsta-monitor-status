@@ -2,7 +2,7 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
         <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
     </edmx:Reference>
-	<edmx:Reference Uri="/sap/opu/odata/sap/ZPSGW_STAGE_SRV/$metadata_Stage">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZPSGW_STAGE_SRV/$metadata">
 		<edmx:Include Alias="Metadata" Namespace="ZPSGW_STAGE_SRV"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
@@ -20,7 +20,7 @@
 					<PropertyPath>CodigoConector</PropertyPath>
 					<PropertyPath>CodigoEmpresa</PropertyPath>
 					<PropertyPath>CodigoEventoNegocio</PropertyPath>
-					<PropertyPath>CodigoRamo</PropertyPath>
+					<PropertyPath>CodigoRamo</PropertyPath>					
 				</Collection>
 			</Annotation>
 			<Annotation Term="UI.LineItem">
@@ -197,13 +197,13 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEQUENCIA_DOCUMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRE/DataEmissaoDocumento">
-			<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSÃO_DE_DOCUMENTO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSAO_DE_DOCUMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRE/CodigoTipoLancamento">
-			<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRE/NumeroVersaoLancamento">
-			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSAO_LANCAMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRE/CodigoEventoNegocio">
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
@@ -365,10 +365,10 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._MODALIDADE}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SIN/NumeroSinistroServico">
-			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SINISTRO_SERVIÇO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SINISTRO_SERVICO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SIN/AnoSinistroServico">
-			<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SINISTRO_SERVIÇO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SINISTRO_SERVICO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SIN/NumeroItemApolice">
 			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._ITEM_APOLICE}"/>
@@ -398,11 +398,19 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_CONECTOR}"/>
 		</Annotations>
 
+		<Annotations Target="Metadata.ZPSTA_STG_BT_SIN/NumeroApoliceSinistroExt">
+			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._APOLICE}"/>
+		</Annotations>
+
+		<Annotations Target="Metadata.ZPSTA_STG_BT_SIN/CodigoSucursalSinistroExt">
+			<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL}"/>
+		</Annotations>		
 
 
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV">
 				<Annotation Term="UI.SelectionFields">
 				<Collection>
+					<PropertyPath>CodigoAtena</PropertyPath>
 					<PropertyPath>CodigoOperacao</PropertyPath>
 					<PropertyPath>CodigoEventoNegocio</PropertyPath>
 					<PropertyPath>NumeroMovimentoPrevExt</PropertyPath>
@@ -505,7 +513,7 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/CodigoOperacao">
-			<Annotation Term="Common.Label" String="{@i18n&gt;COD._OPERAÇÃO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;COD._OPERACAO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/CodigoEventoNegocio">
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
@@ -514,7 +522,7 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._ID_DOC_EVENTO_PREV_EXT}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/NumeroMovimentoPrevExt">
-			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._MOVIMENTO_PREVIDÊNCIA_EXTRATO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._MOVIMENTO_PREVIDENCIA_EXTRATO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/NumeroDetalheMovPrevExt">
 			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._DETALHE_MOV_PREV_EXT}"/>
@@ -526,10 +534,10 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._FUNDO_RESERVA_PREVIDENCIA}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/CodigoTipoLancamento">
-			<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/NumVersaoLancamentoPrevExt">
-			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSÃO_LANÇAMENTO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._VERSAO_LANCAMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_PRV/CodigoEmpresa">
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
@@ -549,12 +557,12 @@
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SOC">
 			<Annotation Term="UI.SelectionFields">
 				<Collection>
+					<PropertyPath>CodigoAtena</PropertyPath>
 					<PropertyPath>CodigoEmpresa</PropertyPath>
 					<PropertyPath>CodigoSucursal</PropertyPath>
 					<PropertyPath>CodigoEventoNegocio</PropertyPath>
 					<PropertyPath>NumeroServico</PropertyPath>
-					<PropertyPath>AnoServico</PropertyPath>
-					<PropertyPath>CodigoAtena</PropertyPath>
+					<PropertyPath>AnoServico</PropertyPath>					
 				</Collection>
 			</Annotation>
 			<Annotation Term="UI.LineItem">
@@ -663,10 +671,10 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SOC/NumeroServico">
-			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SERVIÇO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SERVICO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SOC/AnoServico">
-			<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SERVIÇO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;ANO_SERVICO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SOC/CodigoRamoContabil">
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._RAMO_CONTABIL}"/>
@@ -678,7 +686,7 @@
 			<Annotation Term="Common.Label" String="{@i18n&gt;DATA_COMPETENCIA}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SOC/CodigoTipoLancamento">
-			<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANÇAMENTO}"/>
+			<Annotation Term="Common.Label" String="{@i18n&gt;COD._TIPO_LANCAMENTO}"/>
 		</Annotations>
 		<Annotations Target="Metadata.ZPSTA_STG_BT_SOC/CodigoAtena">
 			<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
@@ -814,6 +822,9 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_SIS/CodigoEmpresa">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
 			</Annotations>
+			<Annotations Target="Metadata.ZPSTA_STG_BT_SIS/CodigoEventoNegocio">
+			<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIO}"/>
+			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_STG_BT_SIS/CodigoSucursalSinSaudeExt">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL_SIN_SAUDE}"/>
 			</Annotations>
@@ -859,6 +870,7 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_CPG">
 					<Annotation Term="UI.SelectionFields">
 					<Collection>
+						<PropertyPath>CodigoAtena</PropertyPath>
 						<PropertyPath>CodigoEmpresa</PropertyPath>
 						<PropertyPath>CodigoConector</PropertyPath>
 						<PropertyPath>CodigoRamo</PropertyPath>
@@ -1034,7 +1046,7 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEGURO_PARCELA}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_STG_BT_CPG/ValorComissao">
-				<Annotation Term="Common.Label" String="{@i18n&gt;VALOR_COMISSÃO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;VALOR_COMISSAO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_STG_BT_CPG/CodigoAtena">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._ATENA}"/>
@@ -1210,6 +1222,12 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_SGS/CodigoEmpresa">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EMPRESA}"/>
 			</Annotations>
+
+			<Annotations Target="Metadata.ZPSTA_STG_BT_SGS/CodigoEventoNegocio">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._EVENTO_NEGOCIIO}"/>
+			</Annotations>
+
+
 			<Annotations Target="Metadata.ZPSTA_STG_BT_SGS/CodigoSucursal">
 				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL}"/>
 			</Annotations>
@@ -1235,7 +1253,7 @@
 				<Annotation Term="Common.Label" String="{@i18n&gt;NUM._SEQUENCIA_DOCUMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_STG_BT_SGS/DataEmissaoDocumento">
-				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSÃO_DE_DOCUMENTO}"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_EMISSAO_DE_DOCUMENTO}"/>
 			</Annotations>
 			<Annotations Target="Metadata.ZPSTA_STG_BT_SGS/Item">
 				<Annotation Term="Common.Label" String="{@i18n&gt;ITEM}"/>
@@ -1258,9 +1276,9 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_R_PRE">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEmpresa</PropertyPath>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>NumeroApolice</PropertyPath>
 					</Collection>
 				</Annotation>
@@ -1417,9 +1435,9 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_R_SIN">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEmpresa</PropertyPath>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEmpresa</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>NumeroApolice</PropertyPath>
 					</Collection>
 				</Annotation>
@@ -1554,8 +1572,8 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_R_PSI">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>Item</PropertyPath>
 						<PropertyPath>SubItem</PropertyPath>
 					</Collection>
@@ -1651,8 +1669,8 @@
 			<Annotations Target="Metadata.ZPSTA_STG_BT_R_PPR">
 				<Annotation Term="UI.SelectionFields">
 					<Collection>
-						<PropertyPath>CodigoEventoNegocio</PropertyPath>
 						<PropertyPath>CodigoAtena</PropertyPath>
+						<PropertyPath>CodigoEventoNegocio</PropertyPath>						
 						<PropertyPath>NumApolicePrevidenciaExt</PropertyPath>
 					</Collection>
 				</Annotation>

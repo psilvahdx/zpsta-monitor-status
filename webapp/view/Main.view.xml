@@ -1,7 +1,8 @@
 <mvc:View controllerName="portoseguro.zpstastatusmon.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
 	xmlns:grid="sap.ui.layout.cssgrid" xmlns:f="sap.f" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
 	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" height="100%" xmlns:cm="sap.suite.ui.commons"
-	xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar">
+	xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:cdata="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
     <Page id="page" title="{i18n>title}">
         <content>
 			<!--EM DESENVOLVIMENTO<Panel id="panelForStatusProcess" expandable="true">
@@ -89,7 +90,7 @@
 							</grid:layoutXL>
 						</grid:GridResponsiveLayout>
 					</f:customLayout>
-					<f:GridListItem type="Active" class="tileSize" press=".onNavDetail" tooltip="{Status}" id="DetailPageInb">
+					<f:GridListItem type="Active" class="tileSize" press=".onNavDetail" tooltip="{Status}" id="DetailPageInb" cdata:customId="DetailPageInb">
 						<Title id="_IDGenTitle2" text="{Status}"/>
 						<NumericContent id="_IDGenNumericContent1" value="{ path: 'TotalRegistros', formatter: '.formatter.numberFormat' }" truncateValueTo="11" withMargin="false"
 							valueColor="{ path: 'Status', formatter: '.formatter.colorChange' }"/>
@@ -125,7 +126,7 @@
 							</grid:layoutXL>
 						</grid:GridResponsiveLayout>
 					</f:customLayout>
-					<f:GridListItem type="Active" class="tileSize" press=".onNavDetail" tooltip="{Status}" id="DetailPageStg">
+					<f:GridListItem type="Active" class="tileSize" press=".onNavDetail" tooltip="{Status}" id="DetailPageStg" cdata:customId="DetailPageStg">
 						<Title id="_IDGenTitle4" text="{Status}"/>
 						<NumericContent id="_IDGenNumericContent2" value="{ path: 'TotalRegistros', formatter: '.formatter.numberFormat' }" truncateValueTo="11" withMargin="false"
 							valueColor="{ path: 'Status', formatter: '.formatter.colorChange'}"/>
@@ -140,12 +141,12 @@
 				<headerToolbar>
 					<OverflowToolbar id="_IDGenOverflowToolbar3" height="3rem" class="toolbarSpacer">
 						<Title id="_IDGenTitle5" text="Tabelas Histórico"/>
-						<Button text="Mais detalhes" icon="sap-icon://form" press="onNavDetail" id="DetailPageHist"/>
+						<Button text="Mais detalhes" icon="sap-icon://form" press="onNavDetail" id="DetailPageHist" cdata:customId="DetailPageHist"/>
 					</OverflowToolbar>
 				</headerToolbar>
+				<viz:Popover id="idPopOver"></viz:Popover> 
 				<layout:FixFlex id='chartFixFlex' minFlexSize="350">
-					<layout:flexContent>
-						<!-- <viz:Popover id="idPopOver"></viz:Popover> -->
+					<layout:flexContent>						
 						<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='bar'>
 							<viz:dataset>
 								<viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/OZPSTA_HIST_TOT}">
