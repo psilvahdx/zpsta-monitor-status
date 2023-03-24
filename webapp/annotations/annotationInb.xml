@@ -361,8 +361,12 @@
 			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/DataInclusaoRegistro">
 				<Annotation Term="Common.Label" String="{@i18n&gt;DATA_DE_INCLUSAO_DE_REGIDTRO}"/>
 			</Annotations>
-			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/Client">
-				<Annotation Term="Common.Label" String="{@i18n&gt;CLIENT}"/>
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoConector">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CODIGO_CONECTOR}"/>
+			</Annotations>
+
+			<Annotations Target="Metadata.ZPSTA_INB_SINEXT/CodigoSucursalSinistroExt">
+				<Annotation Term="Common.Label" String="{@i18n&gt;COD._SUCURSAL}"/>
 			</Annotations>
 
 

@@ -174,7 +174,7 @@ sap.ui.define([
 						var stsItems = stsCoreInb[i];
 						aFilterInb.push(
 							new Filter({
-								path: 'status',
+								path: 'Status',
 								operator: FilterOperator.Contains,
 								value1: stsItems.getText()
 							})
@@ -203,7 +203,7 @@ sap.ui.define([
 						var stsItems = stsCoreStg[i];
 						aFilterStg.push(
 							new Filter({
-								path: 'status',
+								path: 'Status',
 								operator: FilterOperator.Contains,
 								value1: stsItems.getText()
 							})
@@ -247,132 +247,7 @@ sap.ui.define([
 					
 					this.getRouter().navTo(evtId, {});
 				}
-			},
-			
-			initProcessFlowModel: function (){
-				
-				//Em Desenvolvimento
-				/*	var oPfModel = new JSONModel({
-						results:[{
-							data_criacao: "2022-08-04 10:00",
-							data_ini_execucao: "2022-08-04 23:00",
-							data_fim_execucao: "2022-08-05 01:00",
-							codigo_conector: 1,
-							descricao_conector: "Conector 1 - Auto",
-							nodes: [{
-										id: "1",
-										lane: "0",
-										title: "Api Pré",
-										titleAbbreviation: "Api Pre",
-										children: [ 2 ],
-										state: "Positive",
-										stateText: "OK status",
-										focused: true,
-										node_type: "Aggregated",
-										texts: [
-											"Inicio: 23:06",
-											"Fim: 23:07"
-											]
-									},
-									{
-										id: "2",
-										lane: "1",
-										title: "Api Principal",
-										titleAbbreviation: "API Princ",
-										children: [ 3 ],
-										state: "Positive",
-										stateText: "OK status",
-										focused: true,
-										node_type: "Aggregated",
-										texts: [
-											"Inicio: 23:06",
-											"Fim: 00:07"
-											]
-									},
-									{
-										id: "3",
-										lane: "2",
-										title: "Transfer Outbound",
-										titleAbbreviation: "TR OUT",
-										children: [ 4 ],
-										state: "Positive",
-										stateText: "OK status",
-										focused: true,
-										node_type: "Single",
-										texts: [
-											"Inicio: 23:08",
-											"Fim: 23:09"
-											]
-									},
-									{
-										id: "4",
-										lane: "3",
-										title: "SAP FPSL",
-										titleAbbreviation: "FPSL",
-										children: [ 5 ],
-										state: "Negative",
-										stateText: "NOT OK",
-										focused: false,
-										node_type: "Aggregated",
-										texts: null
-									},
-									{
-										id: "5",
-										lane: "4",
-										title: "Api Retorno",
-										titleAbbreviation: "API RET",
-										children: [  ],
-										state: "Negative",
-										stateText: "NOT OK",
-										focused: false,
-										node_type: "Aggregated",
-										texts: null
-									}
-								],
-								lanes: [
-									{
-										id: "0",
-										icon: "sap-icon://filter",
-										label: "Api Pré",
-										position: 0
-									},
-									{
-										id: "1",
-										icon: "sap-icon://developer-settings",
-										label: "Api Principal",
-										position: 1
-									},
-										{
-										id: "2",
-										icon: "sap-icon://translate",
-										label: "Transfer Outbound",
-										position: 2
-									},
-									{
-										id: "3",
-										icon: "sap-icon://sap-box",
-										label: "SAP FPSL",
-										position: 3
-									},
-									{
-										id: "4",
-										icon: "sap-icon://multiselect-all",
-										label: "Api Retorno",
-										position: 4
-									}
-								]
-							
-						}
-						]});
-				
-			
-				
-				 this.getView().setModel(oPfModel,"pflowModel");
-				 
-				 	var oFbStatusProc = this.getView().byId("fbStatusProc"),
-					odtPckrProcess = oFbStatusProc.getAggregation("filterGroupItems")[0].getControl();
-					
-					odtPckrProcess.setDateValue(new Date());*/
 			}
+			
         });
     });
