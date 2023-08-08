@@ -20,7 +20,9 @@
         <IconTabBar
 		id="idIconTabBarHist"
 		class="sapUiResponsiveContentPadding"
-		stretchContentHeight="true">
+		stretchContentHeight="true"
+		expanded="true"
+		expandable="false">
 		<items>
 			<IconTabFilter id="_IDGenIconTabFilter1"
 				icon="sap-icon://accidental-leave"
@@ -37,7 +39,7 @@
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_SOCEXH" smartFilterId="smartFilterBarSocext" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Socorro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSOCEXH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -55,12 +57,13 @@
 				iconColor="Critical"
 				count="{ModelIconTabFilterHist>/nTotal_SINEXH}"
 				text="SINEXH"
-				key="Critical">
+				key="Critical"
+				tooltip="Sinistro Extrato Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSinext" entitySet="OZPSTA_INB_SINEXH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_SINEXH" smartFilterId="smartFilterBarSinext" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Sinistro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSINEXH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -78,12 +81,13 @@
 				iconColor="Negative"
 				count="{ModelIconTabFilterHist>/nTotal_SEGEXH}"
 				text="SEGEXH"
-				key="">
+				key=""
+				tooltip="Seguro Extrato Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSegext" entitySet="OZPSTA_INB_SEGEXH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_SEGEXH" smartFilterId="smartFilterBarSegext" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Seguro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSEGEXH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -101,12 +105,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterHist>/nTotal_SINSEH}"
 				text="SINSEH"
-				key="Ok">
+				key="Ok"
+				tooltip="Sinistro Saúde Extrato Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSinsex" entitySet="OZPSTA_INB_SINSEH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_SINSEH" smartFilterId="smartFilterBarSinsex" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Sinistro Saúde Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSINSEH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -124,12 +129,13 @@
 				iconColor="Critical"
 				count="{ModelIconTabFilterHist>/nTotal_PRVEXH}"
 				text="PRVEXH"
-				key="Heavy">
+				key="Heavy"
+				tooltip="Previdência Extrato Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarPrvext" entitySet="OZPSTA_INB_PRVEXH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_PRVEXH" smartFilterId="smartFilterBarPrvext" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Previdência Ext.  Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblPRVEXH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -147,12 +153,13 @@
 				iconColor="Negative"
 				count="{ModelIconTabFilterHist>/nTotal_COMPGH}"
 				text="COMPGH"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Comissões Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarCompgt" entitySet="OZPSTA_INB_COMPGH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_COMPGH" smartFilterId="smartFilterBarCompgt" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Pagto. Comissões Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblCOMPGH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -171,12 +178,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterHist>/nTotal_R_EXH}"
 				text="R_EXH"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Extrato Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRext" entitySet="OZPSTA_INB_R_EXH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_R_EXH" smartFilterId="smartFilterBarRext" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseguro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_EXH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -194,12 +202,13 @@
 				iconColor="Critical"
 				count="{ModelIconTabFilterHist>/nTotal_R_SINEXH}"
 				text="R_SINEXH"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Sinistro Extrato Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRsinext" entitySet="OZPSTA_INB_R_SINEXH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_R_SINEXH" smartFilterId="smartFilterBarRsinext" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseguro Sinistro Ext. Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_SINEXH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -217,12 +226,13 @@
 				iconColor="Negative"
 				count="{ModelIconTabFilterHist>/nTotal_R_PRVPRH}"
 				text="R_PRVPRH"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Previdência Prêmio Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRprvPre" entitySet="OZPSTA_INB_R_PRVPRH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_R_PRVPRH" smartFilterId="smartFilterBarRprvPre" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseguro Prev. Prêmio Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_PRVPRH" showFullScreenButton="true" 
 					ignoredFields="status"
@@ -240,12 +250,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterHist>/nTotal_R_PRVSIH}"
 				text="R_PRVSIH"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Previdência Sinistro Histórico">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRPrvSin" entitySet="OZPSTA_INB_R_PRVSIH" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_INB_R_PRVSIH" smartFilterId="smartFilterBarRPrvSin" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseguro Prev. Sinistro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblR_PRVSIH" showFullScreenButton="true" 
 					ignoredFields="status"

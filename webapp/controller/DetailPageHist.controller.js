@@ -84,6 +84,10 @@ sap.ui.define([
 				this.byId("smartFilterBarRprvPre")._oHintText.setText(this.geti18NText("FILTER_BAR_NO_FILTER"));
 				this.byId("smartFilterBarRPrvSin")._oHintText.setText(this.geti18NText("FILTER_BAR_NO_FILTER"));
 
+				var iconBar = this.getView().byId('idIconTabBarHist');
+            	var itemBar = iconBar.getItems()[0];
+            	iconBar.setSelectedItem(itemBar);
+
 				oHistService.read(sPath, {
 					urlParameters: {
 						"$filter": "Status eq 'FPSL_PROCESSADO'"

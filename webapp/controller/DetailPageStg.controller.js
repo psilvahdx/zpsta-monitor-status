@@ -107,6 +107,10 @@ sap.ui.define([
 				
                 var oBinding = selectedTable.getBinding('items');
                 oBinding.filter(tblFilters);
+
+				var iconBar = this.getView().byId('idIconTabBarStg');
+            	var itemBar = iconBar.getItems()[0];
+            	iconBar.setSelectedItem(itemBar);
 	        	
 	        	oStageServ.read(sPath, {
 					//filters: [aFilters],
@@ -174,8 +178,8 @@ sap.ui.define([
 				var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation"); // get a handle on the global XAppNav service
 				var hash = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
 					target: {
-						semanticObject: "pstaMonitor",
-						action: "show"
+						semanticObject: "ZSOFPSL",
+                    	action: "zpsta_monitor"
 					},
 					params: {
 					}

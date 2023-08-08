@@ -105,6 +105,11 @@ function (BaseController, Filter, FilterOperator, JSONModel) {
             var oBinding = this.byId("tblResumeStatusInb").getBinding('items');
             oBinding.filter(tblFilters);
             
+            // this.getView().byId('idIconTabBarInb').setSelectedItem(this.getView().byId('_IDGenIconTabFilter1'));
+            var iconBar = this.getView().byId('idIconTabBarInb');
+            var itemBar = iconBar.getItems()[0];
+            iconBar.setSelectedItem(itemBar);
+            // iconBar.setExpandable(true);
 
             oInboundServ.read(sPath, {
                 //filters: [aFilters],
@@ -208,8 +213,8 @@ function (BaseController, Filter, FilterOperator, JSONModel) {
             var oCrossAppNavigator = sap.ushell.Container.getService("CrossApplicationNavigation"); // get a handle on the global XAppNav service
             var hash = (oCrossAppNavigator && oCrossAppNavigator.hrefForExternal({
                 target: {
-                    semanticObject: "pstaMonitor",
-                    action: "show"
+                    semanticObject: "ZSOFPSL",
+                    action: "zpsta_monitor"
                 },
                 params: {
                 }

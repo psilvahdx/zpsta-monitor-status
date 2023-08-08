@@ -20,7 +20,9 @@
         <IconTabBar
 		id="idIconTabBarStg"
 		class="sapUiResponsiveContentPadding"
-		stretchContentHeight="true">
+		stretchContentHeight="true"
+		expanded="true"
+		expandable="false">
 		<items>
 			<IconTabFilter id="_IDGenIconTabFilter1"
 				showAll="true"
@@ -50,6 +52,10 @@
 						width="5rem">
 							<Text id="_IDGenText1" text="Codigo Conector"/>
 						</Column>
+						<Column id="_IDGenColumn4" 
+						width="5rem">
+							<Text id="_IDGenText7"  text="Descrição"/>
+						</Column>
 						<Column id="_IDGenColumn2"
 						width="5rem">
 							<Text id="_IDGenText2" text="Tabela"/>
@@ -63,6 +69,7 @@
 						<ColumnListItem id="_IDGenColumnListItem1">
 							<cells>
 								<Text id="_IDGenText4" text="{CodigoConector}"/>
+								<Text id="_IDGenText8" text="{Descricao}"/>
 								<Text id="_IDGenText5" text="{Tabela}"/>
 								<Text id="_IDGenText6" text="{ path: 'TotalRegistros', formatter: '.formatter.numberFormat' }"/>
 							</cells>
@@ -77,7 +84,8 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterStg>/nTotal_PRE}"
 				text="PRE"
-				key="Ok">
+				key="Ok"
+				tooltip="Prêmio">
 				<smartFilterBar:SmartFilterBar visible="false" id="smartFilterBarDummy" entitySet="/" persistencyKey="SmartFilter_Exploreddummy">
 					<smartFilterBar:controlConfiguration>
 					</smartFilterBar:controlConfiguration>
@@ -86,7 +94,7 @@
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_PRE" smartFilterId="smartFilterBarPre" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Prêmio Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblPRE" showFullScreenButton="true"
 					ignoredFields="Status"
@@ -103,12 +111,13 @@
 				iconColor="Critical"
 				count="{ModelIconTabFilterStg>/nTotal_SIN}"
 				text="SIN"
-				key="Critical">
+				key="Critical"
+				tooltip="Sinistro">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSin" entitySet="OZPSTA_STG_BT_SIN" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_SIN" smartFilterId="smartFilterBarSin" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Snistro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSIN" showFullScreenButton="true"
 					ignoredFields="status"
@@ -125,12 +134,13 @@
 				iconColor="Negative"
 				count="{ModelIconTabFilterStg>/nTotal_PRV}"
 				text="PRV"
-				key="Ok">
+				key="Ok"
+				tooltip="Previdência">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarPrv" entitySet="OZPSTA_STG_BT_PRV" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_PRV" smartFilterId="smartFilterBarPrv" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Previdência Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblPRV" showFullScreenButton="true"
 					ignoredFields="status"
@@ -147,12 +157,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterStg>/nTotal_SOC}"
 				text="SOC"
-				key="Ok">
+				key="Ok"
+				tooltip="Socorro">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSoc" entitySet="OZPSTA_STG_BT_SOC" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_SOC" smartFilterId="smartFilterBarSoc" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Socorro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSOC" showFullScreenButton="true"
 					ignoredFields="status"
@@ -169,12 +180,13 @@
 				iconColor="Critical"
 				count="{ModelIconTabFilterStg>/nTotal_SIS}"
 				text="SIS"
-				key="Ok">
+				key="Ok"
+				tooltip="Sinistro Saúde">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSis" entitySet="OZPSTA_STG_BT_SIS" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_SIS" smartFilterId="smartFilterBarSis" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Sinistro Saúde Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSIS" showFullScreenButton="true"
 					ignoredFields="status"
@@ -191,12 +203,13 @@
 				iconColor="Negative"
 				count="{ModelIconTabFilterStg>/nTotal_CPG}"
 				text="CPG"
-				key="Ok">
+				key="Ok"
+				tooltip="Comissões">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarCpg" entitySet="OZPSTA_STG_BT_CPG" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_CPG" smartFilterId="smartFilterBarCpg" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Pagto. Comissões Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblCPG" showFullScreenButton="true"
 					ignoredFields="status"
@@ -213,12 +226,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterStg>/nTotal_SGS}"
 				text="SGS"
-				key="Ok">
+				key="Ok"
+				tooltip="Saúde">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarSgs" entitySet="OZPSTA_STG_BT_SGS" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_SGS" smartFilterId="smartFilterBarSgs" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Seguro Saúde Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblSGS" showFullScreenButton="true"
 					ignoredFields="status"
@@ -236,12 +250,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterStg>/nTotal_R_PRE}"
 				text="RESS_PREMIO"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Prêmio">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRPRE" entitySet="OZPSTA_STG_BT_R_PRE" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_R_PRE" smartFilterId="smartFilterBarRPRE" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseguro Prêmio Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblRESS_PREMIO" showFullScreenButton="true"
 					ignoredFields="status"
@@ -259,12 +274,13 @@
 				iconColor="Critical"
 				count="{ModelIconTabFilterStg>/nTotal_R_SIN}"
 				text="RESS_SIN"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Sinistro">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRSIN" entitySet="OZPSTA_STG_BT_R_SIN" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_R_SIN" smartFilterId="smartFilterBarRSIN" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseguro Sinistro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblRESS_SIN" showFullScreenButton="true"
 					ignoredFields="status"
@@ -282,12 +298,13 @@
 				iconColor="Negative"
 				count="{ModelIconTabFilterStg>/nTotal_R_PPR}"
 				text="RESS_PRVPRE"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Previdência Prêmio">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRprvPre" entitySet="OZPSTA_STG_BT_R_PPR" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_R_PPR" smartFilterId="smartFilterBarRprvPre" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseg. Previd. Prêmio Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblRESS_PRVPRE" showFullScreenButton="true"
 					ignoredFields="status"
@@ -305,12 +322,13 @@
 				iconColor="Positive"
 				count="{ModelIconTabFilterStg>/nTotal_R_PSI}"
 				text="RESS_PRVSIN"
-				key="Overweight">
+				key="Overweight"
+				tooltip="Resseguro Previdência Sinistro">
 				<smartFilterBar:SmartFilterBar id="smartFilterBarRPrvSin" entitySet="OZPSTA_STG_BT_R_PSI" persistencyKey="SmartFilter_Explored">
 					<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 				</smartFilterBar:SmartFilterBar>
 				<smartTable:SmartTable entitySet="OZPSTA_STG_BT_R_PSI" smartFilterId="smartFilterBarRPrvSin" editTogglable="false"
-					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="false"
+					editable="false" tableType="Table" useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true"
 					useTablePersonalisation="true" header="Resseg. Previd. Sinistro Qtd. Registros" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"
 					enableAutoBinding="false" class="sapUiResponsiveContentPadding" id="tblRESS_PRVSIN" showFullScreenButton="true"
 					ignoredFields="status"

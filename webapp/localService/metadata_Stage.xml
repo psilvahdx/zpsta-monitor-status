@@ -503,6 +503,7 @@
                 <PropertyRef Name="Tabela"/>
             </Key>
             <Property Name="CodigoConector" Type="Edm.Decimal" Precision="18" Scale="0" sap:unicode="false" sap:label="CODIGO_CONECTOR"/>
+            <Property Name="Descricao" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="DESCRICAO"/>
             <Property Name="Tabela" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="TABELA"/>
             <Property Name="TotalRegistros" Type="Edm.Int32" sap:unicode="false" sap:label="TOTAL_REGISTROS"/>
             <Property Name="Status" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="STATUS"/>
